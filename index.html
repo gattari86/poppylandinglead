@@ -923,12 +923,16 @@
             }
 
             section {
-                padding: var(--space-3xl) 0;
+                padding: var(--space-4xl) 0;
             }
 
             section h2 {
-                font-size: 2.4rem;
-                margin-bottom: var(--space-2xl);
+                font-size: 2.8rem;
+                margin-bottom: var(--space-3xl);
+            }
+
+            section h2::after {
+                margin-top: var(--space-lg);
             }
 
             .services-grid,
@@ -937,12 +941,18 @@
             .testimonial-grid,
             .pricing-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: var(--space-2xl);
+                gap: var(--space-3xl);
             }
 
             .process-timeline {
                 grid-template-columns: repeat(2, 1fr);
-                gap: var(--space-2xl);
+                gap: var(--space-3xl);
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                font-size: 1rem;
+                padding: 14px 32px;
             }
         }
 
@@ -983,11 +993,17 @@
 
             section {
                 padding: var(--space-3xl) 0;
+                margin-top: var(--space-xl);
             }
 
             section h2 {
-                font-size: 2rem;
-                margin-bottom: var(--space-2xl);
+                font-size: 2.4rem;
+                margin-bottom: var(--space-3xl);
+                line-height: 1.3;
+            }
+
+            section h2::after {
+                margin-top: var(--space-lg);
             }
 
             .container {
@@ -1001,7 +1017,7 @@
             .pricing-grid,
             .process-timeline {
                 grid-template-columns: 1fr;
-                gap: var(--space-2xl);
+                gap: var(--space-3xl);
             }
 
             .portfolio-card {
@@ -1026,7 +1042,30 @@
             .portfolio-card,
             .testimonial-card,
             .pricing-card {
-                padding: var(--space-2xl);
+                padding: var(--space-2xl) var(--space-xl);
+            }
+
+            .service-card {
+                padding: var(--space-3xl) var(--space-2xl);
+            }
+
+            .benefit-card {
+                padding: var(--space-2xl) var(--space-lg);
+            }
+
+            .testimonial-card {
+                padding: var(--space-2xl) var(--space-lg);
+            }
+
+            .pricing-card {
+                padding: var(--space-3xl) var(--space-xl);
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                padding: 16px var(--space-lg);
+                font-size: 1rem;
             }
 
             .final-cta {
@@ -1088,12 +1127,20 @@
             }
 
             section {
-                padding: var(--space-2xl) 0;
+                padding: var(--space-3xl) 0;
+                margin-top: var(--space-lg);
             }
 
             section h2 {
-                font-size: 1.6rem;
-                margin-bottom: var(--space-lg);
+                font-size: 1.8rem;
+                margin-bottom: var(--space-2xl);
+                line-height: 1.3;
+            }
+
+            section h2::after {
+                width: 60px;
+                height: 3px;
+                margin-top: var(--space-md);
             }
 
             .container {
@@ -1106,7 +1153,7 @@
             .testimonial-grid,
             .pricing-grid,
             .process-timeline {
-                gap: var(--space-lg);
+                gap: var(--space-2xl);
             }
 
             .service-card,
@@ -1114,7 +1161,32 @@
             .portfolio-card,
             .testimonial-card,
             .pricing-card {
-                padding: var(--space-lg);
+                padding: var(--space-2xl) var(--space-lg);
+            }
+
+            .service-icon {
+                height: 60px;
+                width: 60px;
+            }
+
+            .service-icon i {
+                font-size: 2.5rem;
+            }
+
+            .benefit-icon {
+                font-size: 2rem;
+                height: 50px;
+            }
+
+            .benefit-icon i {
+                font-size: 2rem;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                padding: 14px var(--space-lg);
+                font-size: 0.95rem;
             }
 
             .pricing-card h3 {
