@@ -219,6 +219,12 @@
             box-shadow: 0 12px 32px rgba(159, 125, 255, 0.15);
         }
 
+        .service-icon {
+            font-size: 3rem;
+            color: var(--poppy-purple);
+            margin-bottom: var(--space-lg);
+        }
+
         .service-card h3 {
             font-family: 'Poppins', sans-serif;
             font-size: 1.5rem;
@@ -462,6 +468,17 @@
             border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             border-left: 4px solid var(--poppy-purple);
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 4px;
+            margin-bottom: var(--space-md);
+            font-size: 1.2rem;
+        }
+
+        .testimonial-stars i {
+            color: #ffc107;
         }
 
         .testimonial-card p {
@@ -733,23 +750,114 @@
             transform: translateY(-4px);
         }
 
+        /* Lightbox Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            position: relative;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .modal-image {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            animation: zoomIn 0.3s ease-in-out;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .close {
+            position: absolute;
+            right: 35px;
+            top: 15px;
+            color: var(--pure-white);
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 2001;
+        }
+
+        .close:hover {
+            color: var(--poppy-purple);
+        }
+
+        /* Footer */
         footer {
             background: #1a1a1a;
             color: var(--pure-white);
             padding: var(--space-2xl) var(--space-xl);
-            text-align: center;
             font-size: 0.95rem;
-            opacity: 0.9;
+            opacity: 0.95;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-2xl);
+            text-align: center;
+        }
+
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+
+        .footer-section p {
+            margin: 0;
             line-height: 1.6;
         }
 
         footer a {
             color: var(--turquoise);
             text-decoration: none;
+            transition: color 0.3s;
         }
 
         footer a:hover {
-            text-decoration: underline;
+            color: var(--poppy-purple);
+        }
+
+        .btn-call {
+            display: inline-block;
+            padding: 12px 24px;
+            background: var(--poppy-purple);
+            color: var(--pure-white);
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-top: var(--space-sm);
+        }
+
+        .btn-call:hover {
+            background: #8a5fb0;
+            transform: translateY(-2px);
         }
 
         @media (max-width: 1024px) {
@@ -1040,14 +1148,17 @@
         <h2>Our Offers</h2>
         <div class="services-grid">
             <div class="service-card">
+                <div class="service-icon"><i class="ph ph-palette"></i></div>
                 <h3>Logo Design</h3>
                 <p>Custom brand logos that establish a strong visual identity. Professional logo package with all source files included. Starting at $350.</p>
             </div>
             <div class="service-card">
+                <div class="service-icon"><i class="ph ph-globe"></i></div>
                 <h3>Web Design</h3>
                 <p>Professional websites designed to convert visitors into customers. Starting at $1,200.</p>
             </div>
             <div class="service-card">
+                <div class="service-icon"><i class="ph ph-megaphone"></i></div>
                 <h3>Meta Ads Management</h3>
                 <p>Performance-based advertising campaigns to reach your ideal customers. Starting at $500.</p>
             </div>
@@ -1178,14 +1289,23 @@
             <h2>Client Success Stories</h2>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="ph ph-star"></i><i class="ph ph-star"></i><i class="ph ph-star"></i><i class="ph ph-star"></i><i class="ph ph-star"></i>
+                    </div>
                     <p>"Professional, knowledgeable, attentive and perceptive. The creativity and superb work all around exceeded my expectations. They understood exactly what was needed to market strategically and build a site that would establish our brand."</p>
                     <div class="testimonial-author">- Verified Client Review</div>
                 </div>
                 <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="ph ph-star"></i><i class="ph ph-star"></i><i class="ph ph-star"></i><i class="ph ph-star"></i><i class="ph ph-star"></i>
+                    </div>
                     <p>"Working with Poppy has been an absolute game-changer for our business. I'm impressed by their professionalism and deep understanding of strategy and marketing. They didn't offer cookie-cutter solutions but took time to understand our goals and crafted a customized approach."</p>
                     <div class="testimonial-author">- Verified Client Review</div>
                 </div>
                 <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="ph ph-star"></i><i class="ph ph-star"></i><i class="ph ph-star"></i><i class="ph ph-star"></i><i class="ph ph-star"></i>
+                    </div>
                     <p>"They consistently went above and beyond with assistance on our website, displaying professionalism, expertise, and genuine interest in our vision, delivering a website that was both visually impressive and operated flawlessly."</p>
                     <div class="testimonial-author">- Verified Client Review</div>
                 </div>
@@ -1320,16 +1440,61 @@
         </div>
     </section>
 
+    <!-- Lightbox Modal for Portfolio Images -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img class="modal-image" id="modalImage" src="" alt="Portfolio Project">
+        </div>
+    </div>
+
     <footer>
-        <p>Copyright 2025 Poppy Marketing & Consulting. Affordable Marketing for Small Businesses. | <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a></p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <p>Copyright 2025 Poppy Marketing & Consulting. Affordable Marketing for Small Businesses.</p>
+            </div>
+            <div class="footer-section">
+                <p><strong>Contact Us</strong></p>
+                <p><i class="ph ph-envelope"></i> <a href="mailto:info@poppymarketingandconsulting.com">info@poppymarketingandconsulting.com</a></p>
+                <p><i class="ph ph-phone"></i> <a href="tel:+19417774933">(941) 777-4933</a></p>
+            </div>
+            <div class="footer-section">
+                <a href="tel:+19417774933" class="btn-call">Call Us: (941) 777-4933</a>
+            </div>
+        </div>
     </footer>
 
     <script>
+        // FAQ Toggle
         const faqItems = document.querySelectorAll('.faq-item');
         faqItems.forEach(item => {
             item.querySelector('.faq-question').addEventListener('click', () => {
                 item.classList.toggle('active');
             });
+        });
+
+        // Portfolio Image Lightbox
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeBtn = document.querySelector('.close');
+        const portfolioImages = document.querySelectorAll('.portfolio-image img');
+
+        portfolioImages.forEach(img => {
+            img.addEventListener('click', () => {
+                modal.style.display = 'block';
+                modalImage.src = img.src;
+            });
+            img.style.cursor = 'pointer';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
         });
     </script>
 </body>
