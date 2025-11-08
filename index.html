@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poppy Marketing & Consulting - Affordable Marketing for Small Businesses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Primary Colors */
+            --primary-blue: #2c5484;
+            --accent-teal: #47a3c2;
+            --pink-coral: #ff6b8b;
+            --purple: #9f7dff;
+            --turquoise: #30d1b0;
+            --dark-purple: #53498c;
+
+            /* Supporting Colors */
+            --light-gray: #f5f7fa;
+            --dark-gray: #333333;
+            --pure-white: #ffffff;
+            --border-gray: #e0e0e0;
+
+            /* Spacing Scale (8px base) */
+            --space-xs: 8px;
+            --space-sm: 12px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+            --space-2xl: 48px;
+            --space-3xl: 64px;
+            --space-4xl: 80px;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background: var(--pure-white);
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--pure-white);
+            padding: var(--space-md) var(--space-xl);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: var(--primary-blue);
+            font-size: 1.3rem;
+        }
+
+        .logo-section img {
+            height: 40px;
+            width: auto;
+        }
+
+        nav-links {
+            display: flex;
+            gap: var(--space-2xl);
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-teal);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-teal) 100%);
+            color: var(--pure-white);
+            padding: var(--space-4xl) var(--space-xl);
+            text-align: center;
+            min-height: 640px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-3xl);
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            max-width: 800px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            opacity: 0.95;
+            font-weight: 300;
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            padding: 18px 48px;
+            background: var(--turquoise);
+            color: var(--pure-white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 8px 24px rgba(48, 209, 176, 0.35);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(48, 209, 176, 0.45);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+        }
+
+        /* Section Styles */
+        section {
+            padding: var(--space-4xl) 0;
+        }
+
+        section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8rem;
+            color: var(--primary-blue);
+            margin-bottom: var(--space-3xl);
+            text-align: center;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: var(--space-3xl);
+        }
+
+        .service-card {
+            background: var(--light-gray);
+            padding: var(--space-3xl);
+            border-radius: 12px;
+            text-align: center;
+            border-left: 5px solid var(--accent-teal);
+            transition: all 0.3s;
+        }
+
+        .service-card:nth-child(2) {
+            border-left-color: var(--pink-coral);
+        }
+
+        .service-card:nth-child(3) {
+            border-left-color: var(--turquoise);
+        }
+
+        .service-card:nth-child(4) {
+            border-left-color: var(--purple);
+        }
+
+        .service-card:nth-child(5) {
+            border-left-color: var(--dark-purple);
+        }
+
+        .service-card:nth-child(6) {
+            border-left-color: var(--accent-teal);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(44, 84, 132, 0.15);
+        }
+
+        .service-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.35rem;
+            color: var(--primary-blue);
+            margin-bottom: var(--space-md);
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .service-card p {
+            color: var(--dark-gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Why Choose Section */
+        .why-choose-section {
+            background: var(--light-gray);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-3xl);
+        }
+
+        .benefit-card {
+            background: var(--pure-white);
+            padding: var(--space-2xl);
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+
+        .benefit-card:hover {
+            box-shadow: 0 12px 32px rgba(44, 84, 132, 0.12);
+            transform: translateY(-6px);
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+
+        .benefit-card:nth-child(1) .benefit-icon {
+            background: rgba(44, 84, 132, 0.1);
+        }
+
+        .benefit-card:nth-child(2) .benefit-icon {
+            background: rgba(255, 107, 139, 0.1);
+        }
+
+        .benefit-card:nth-child(3) .benefit-icon {
+            background: rgba(48, 209, 176, 0.1);
+        }
+
+        .benefit-card:nth-child(4) .benefit-icon {
+            background: rgba(159, 125, 255, 0.1);
+        }
+
+        .benefit-card:nth-child(5) .benefit-icon {
+            background: rgba(71, 163, 194, 0.1);
+        }
+
+        .benefit-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25rem;
+            color: var(--primary-blue);
+            margin-bottom: var(--space-md);
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .benefit-card p {
+            color: var(--dark-gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Portfolio/Case Studies Section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--space-3xl);
+        }
+
+        .portfolio-card {
+            background: var(--pure-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(44, 84, 132, 0.08);
+            transition: all 0.3s;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 16px 40px rgba(44, 84, 132, 0.18);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-teal) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--pure-white);
+            font-weight: 600;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.95rem;
+        }
+
+        .portfolio-body {
+            padding: var(--space-2xl);
+        }
+
+        .portfolio-industry {
+            display: inline-block;
+            background: var(--pink-coral);
+            color: var(--pure-white);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .portfolio-body h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25rem;
+            color: var(--primary-blue);
+            margin-bottom: var(--space-md);
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .portfolio-body p {
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: var(--space-md);
+        }
+
+        .portfolio-cta {
+            color: var(--accent-teal);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .portfolio-cta:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Process Section */
+        .process-section {
+            background: var(--light-gray);
+        }
+
+        .process-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-3xl);
+            position: relative;
+        }
+
+        .process-step {
+            background: var(--pure-white);
+            padding: var(--space-2xl);
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .step-number {
+            width: 56px;
+            height: 56px;
+            background: var(--primary-blue);
+            color: var(--pure-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.6rem;
+            margin: 0 auto var(--space-lg);
+        }
+
+        .process-step h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-blue);
+            margin-bottom: var(--space-md);
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .process-step p {
+            color: var(--dark-gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background: var(--pure-white);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-2xl);
+        }
+
+        .testimonial-card {
+            background: var(--light-gray);
+            padding: var(--space-2xl);
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-teal);
+        }
+
+        .testimonial-card:nth-child(2) {
+            border-left-color: var(--pink-coral);
+        }
+
+        .testimonial-card:nth-child(3) {
+            border-left-color: var(--turquoise);
+        }
+
+        .stars {
+            color: var(--pink-coral);
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+
+        .testimonial-card p {
+            color: var(--dark-gray);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .author {
+            font-weight: 600;
+            color: var(--primary-blue);
+            font-size: 0.95rem;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            background: var(--light-gray);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-3xl);
+            margin-top: var(--space-3xl);
+        }
+
+        .pricing-card {
+            background: var(--pure-white);
+            padding: var(--space-3xl);
+            border-radius: 12px;
+            border-top: 5px solid var(--accent-teal);
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .pricing-card:nth-child(2) {
+            border-top-color: var(--pink-coral);
+            transform: scale(1.05);
+        }
+
+        .pricing-card:nth-child(3) {
+            border-top-color: var(--turquoise);
+        }
+
+        .pricing-card:hover {
+            box-shadow: 0 8px 25px rgba(44, 84, 132, 0.12);
+        }
+
+        .pricing-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: var(--space-md);
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }
+
+        .pricing-amount {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            color: var(--pink-coral);
+            margin-bottom: var(--space-lg);
+            font-weight: 700;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            margin-bottom: var(--space-2xl);
+            text-align: left;
+        }
+
+        .pricing-card li {
+            padding: var(--space-md) 0;
+            border-bottom: 1px solid var(--border-gray);
+            color: var(--dark-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .pricing-card li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-cta {
+            display: block;
+            width: 100%;
+            padding: 16px var(--space-2xl);
+            background: var(--primary-blue);
+            color: var(--pure-white);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 700;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(44, 84, 132, 0.2);
+        }
+
+        .pricing-cta:hover {
+            background: #1e3d5e;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(44, 84, 132, 0.3);
+        }
+
+        /* Founder Section */
+        .founder-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-teal) 100%);
+            color: var(--pure-white);
+            padding: var(--space-4xl) var(--space-xl);
+            text-align: center;
+        }
+
+        .founder-section h2 {
+            color: var(--pure-white);
+            font-size: 2.8rem;
+            margin-bottom: var(--space-2xl);
+        }
+
+        .founder-content {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .founder-section p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: var(--space-lg);
+            opacity: 0.95;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: var(--light-gray);
+        }
+
+        .faq-container {
+            max-width: 750px;
+            margin: var(--space-3xl) auto 0;
+        }
+
+        .faq-item {
+            background: var(--pure-white);
+            margin-bottom: var(--space-md);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .faq-question {
+            padding: var(--space-lg);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-blue);
+            transition: all 0.3s;
+        }
+
+        .faq-question:hover {
+            background: var(--light-gray);
+            color: var(--accent-teal);
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: var(--light-gray);
+            line-height: 1.8;
+            color: var(--dark-gray);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 400px;
+            padding: var(--space-lg);
+            border-top: 1px solid var(--border-gray);
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-teal) 100%);
+            color: var(--pure-white);
+            text-align: center;
+            padding: var(--space-4xl) var(--space-xl);
+        }
+
+        .final-cta h2 {
+            color: var(--pure-white);
+            font-size: 2.8rem;
+            margin-bottom: var(--space-lg);
+            letter-spacing: 0.3px;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: var(--space-2xl);
+            opacity: 0.95;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: var(--space-lg);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            padding: 18px var(--space-2xl);
+            background: var(--turquoise);
+            color: var(--pure-white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(48, 209, 176, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(48, 209, 176, 0.4);
+        }
+
+        .btn-secondary {
+            padding: 18px var(--space-2xl);
+            background: transparent;
+            color: var(--pure-white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            border: 2px solid var(--pure-white);
+            transition: all 0.3s;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-secondary:hover {
+            background: var(--pure-white);
+            color: var(--primary-blue);
+            transform: translateY(-4px);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: var(--pure-white);
+            padding: var(--space-2xl) var(--space-xl);
+            text-align: center;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        footer a {
+            color: var(--turquoise);
+            text-decoration: none;
+        }
+
+        /* Responsive - Tablet (1024px and below) */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 var(--space-lg);
+            }
+
+            section {
+                padding: var(--space-3xl) 0;
+            }
+
+            section h2 {
+                font-size: 2.4rem;
+                margin-bottom: var(--space-2xl);
+            }
+
+            .services-grid,
+            .benefits-grid,
+            .portfolio-grid,
+            .testimonial-grid,
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-2xl);
+            }
+
+            .process-timeline {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-2xl);
+            }
+        }
+
+        /* Responsive - Mobile Tablet (768px and below) */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: var(--space-md) var(--space-lg);
+                gap: var(--space-md);
+            }
+
+            nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: var(--space-3xl) var(--space-lg);
+                gap: var(--space-2xl);
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+                line-height: 1.3;
+            }
+
+            .hero p {
+                font-size: 1.05rem;
+            }
+
+            .hero-cta {
+                padding: 16px var(--space-xl);
+                font-size: 1rem;
+            }
+
+            section {
+                padding: var(--space-3xl) 0;
+            }
+
+            section h2 {
+                font-size: 2rem;
+                margin-bottom: var(--space-2xl);
+            }
+
+            .container {
+                padding: 0 var(--space-lg);
+            }
+
+            .services-grid,
+            .benefits-grid,
+            .portfolio-grid,
+            .testimonial-grid,
+            .pricing-grid,
+            .process-timeline {
+                grid-template-columns: 1fr;
+                gap: var(--space-2xl);
+            }
+
+            .pricing-card:nth-child(2) {
+                transform: scale(1);
+            }
+
+            .service-card,
+            .benefit-card,
+            .portfolio-card,
+            .testimonial-card,
+            .pricing-card {
+                padding: var(--space-2xl);
+            }
+
+            .final-cta {
+                padding: var(--space-3xl) var(--space-lg);
+            }
+
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+                gap: var(--space-lg);
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                padding: 16px var(--space-lg);
+            }
+
+            .founder-section {
+                padding: var(--space-3xl) var(--space-lg);
+            }
+
+            .faq-container {
+                margin: var(--space-2xl) auto 0;
+            }
+        }
+
+        /* Responsive - Mobile (480px and below) */
+        @media (max-width: 480px) {
+            nav {
+                padding: var(--space-sm) var(--space-md);
+                gap: var(--space-sm);
+            }
+
+            .logo-section {
+                font-size: 1.5rem;
+            }
+
+            .hero {
+                padding: var(--space-2xl) var(--space-md);
+                gap: var(--space-xl);
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+                line-height: 1.2;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .hero-cta {
+                padding: 14px var(--space-lg);
+                font-size: 0.9rem;
+            }
+
+            section {
+                padding: var(--space-2xl) 0;
+            }
+
+            section h2 {
+                font-size: 1.6rem;
+                margin-bottom: var(--space-lg);
+            }
+
+            .container {
+                padding: 0 var(--space-md);
+            }
+
+            .services-grid,
+            .benefits-grid,
+            .portfolio-grid,
+            .testimonial-grid,
+            .pricing-grid,
+            .process-timeline {
+                gap: var(--space-lg);
+            }
+
+            .service-card,
+            .benefit-card,
+            .portfolio-card,
+            .testimonial-card,
+            .pricing-card {
+                padding: var(--space-lg);
+            }
+
+            .pricing-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .pricing-amount {
+                font-size: 1.8rem;
+            }
+
+            .final-cta {
+                padding: var(--space-2xl) var(--space-md);
+            }
+
+            .final-cta h2 {
+                font-size: 1.6rem;
+                margin-bottom: var(--space-md);
+            }
+
+            .final-cta p {
+                font-size: 1rem;
+                margin-bottom: var(--space-lg);
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                padding: 14px var(--space-md);
+                font-size: 0.9rem;
+            }
+
+            .founder-section {
+                padding: var(--space-2xl) var(--space-md);
+            }
+
+            .founder-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .founder-section p {
+                font-size: 1rem;
+            }
+
+            .faq-question {
+                padding: var(--space-md);
+                font-size: 0.95rem;
+            }
+
+            .faq-answer {
+                font-size: 0.9rem;
+            }
+
+            .faq-item.active .faq-answer {
+                padding: var(--space-md);
+            }
+
+            footer {
+                padding: var(--space-lg) var(--space-md);
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo-section">
+            poppy
+        </div>
+        <nav-links>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#process">Process</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+        </nav-links>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Small Business Marketing That Gets Results</h1>
+        <p>Web design, social media, paid ads, and branding for Houston-area businesses</p>
+        <a href="#contact" class="hero-cta">Get Free Strategy Call</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="container" id="services">
+        <h2>Complete Marketing Solutions</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Web Design</h3>
+                <p>Professional websites designed to convert visitors into customers. Starting at $2,500.</p>
+            </div>
+            <div class="service-card">
+                <h3>Logo Design</h3>
+                <p>Custom brand logos that make your business stand out. Starting at $350.</p>
+            </div>
+            <div class="service-card">
+                <h3>Social Media Management</h3>
+                <p>Monthly content, posting, and engagement management. Starting at $1,000/month.</p>
+            </div>
+            <div class="service-card">
+                <h3>Facebook & Instagram Ads</h3>
+                <p>Performance-based advertising campaigns to reach your ideal customers.</p>
+            </div>
+            <div class="service-card">
+                <h3>Marketing Consulting</h3>
+                <p>Strategic guidance from marketing experts. $250/hour consulting available.</p>
+            </div>
+            <div class="service-card">
+                <h3>Content Creation</h3>
+                <p>Blog posts, graphics, and video content tailored to your brand.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Poppy Section -->
+    <section class="why-choose-section">
+        <div class="container">
+            <h2>Why Small Businesses Love Poppy</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Affordable Pricing</h3>
+                    <p>No hidden fees. Transparent quotes and flexible payment options for every budget.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">👥</div>
+                    <h3>Personalized Attention</h3>
+                    <p>Weekly check-ins and direct communication. You'll never be handed off to juniors.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌐</div>
+                    <h3>Bilingual Expertise</h3>
+                    <p>English/Spanish services for Houston's diverse business community.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⭐</div>
+                    <h3>Fortune 500 Experience</h3>
+                    <p>17+ years marketing expertise from major corporations, applied to your business.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h3>Proven Results</h3>
+                    <p>5-star reputation with verified reviews proving our commitment to client success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="container" id="portfolio">
+        <h2>See What We've Built</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <span style="font-size: 3rem;">🎥</span>
+                </div>
+                <div class="portfolio-body">
+                    <span class="portfolio-industry">Video Production</span>
+                    <h3>Phoenix Productions</h3>
+                    <p>Bold, modern website design for a creative production company. Dark theme with large hero section and portfolio showcase.</p>
+                    <a href="#" class="portfolio-cta">View Project →</a>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #FF9800 0%, #FFC107 100%);">
+                    <span style="font-size: 3rem;">🚰</span>
+                </div>
+                <div class="portfolio-body">
+                    <span class="portfolio-industry">Plumbing Service</span>
+                    <h3>Drain Time Plumbing</h3>
+                    <p>Local service website with bright branding, multiple CTAs, and financing options. Built to convert emergency calls.</p>
+                    <a href="#" class="portfolio-cta">View Project →</a>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #FF5722 0%, #FF9800 100%);">
+                    <span style="font-size: 3rem;">🌮</span>
+                </div>
+                <div class="portfolio-body">
+                    <span class="portfolio-industry">Restaurant</span>
+                    <h3>Takeiro Staqueria</h3>
+                    <p>Vibrant food-focused design with high-quality imagery, menu integration, and local community focus.</p>
+                    <a href="#" class="portfolio-cta">View Project →</a>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #4CAF50 0%, #81C784 100%);">
+                    <span style="font-size: 3rem;">🌿</span>
+                </div>
+                <div class="portfolio-body">
+                    <span class="portfolio-industry">Lawn Care</span>
+                    <h3>Green Image</h3>
+                    <p>Nature-focused lawn care site with before/after transformations, service grid, and strong testimonials.</p>
+                    <a href="#" class="portfolio-cta">View Project →</a>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);">
+                    <span style="font-size: 3rem;">🧹</span>
+                </div>
+                <div class="portfolio-body">
+                    <span class="portfolio-industry">Cleaning Service</span>
+                    <h3>Viking Cleaning</h3>
+                    <p>Professional cleaning service site with comparison charts, service breakdowns, and customer testimonials.</p>
+                    <a href="#" class="portfolio-cta">View Project →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section" id="process">
+        <div class="container">
+            <h2>How We Work Together</h2>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Discovery</h3>
+                    <p>Free strategy call to understand your goals, challenges, and target audience.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Strategy</h3>
+                    <p>Custom marketing plan tailored specifically to your business and budget.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Execution</h3>
+                    <p>We build and implement while keeping you updated with weekly check-ins.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Results</h3>
+                    <p>Track metrics, adjust strategies, and optimize for continuous growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>Our Clients Are Our Best Reference</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Professional, timely, and attentive. Ricardo really listens to what you need and delivers results. Highly recommend!"</p>
+                    <div class="author">James T. - Business Owner</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Best marketing investment we made. Our website is beautiful and the leads keep coming. Worth every penny."</p>
+                    <div class="author">Maria G. - Salon Owner</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Fast, responsive, and results-driven. Ricardo goes above and beyond. He's an extension of our team."</p>
+                    <div class="author">David L. - Service Business</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <h2>Plans That Fit Your Budget</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="pricing-amount">$350</div>
+                    <ul>
+                        <li>Logo Design</li>
+                        <li>Basic Web Presence</li>
+                        <li>Social Media Setup</li>
+                        <li>One Consultation</li>
+                    </ul>
+                    <button class="pricing-cta">Get Started</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Growth</h3>
+                    <div class="pricing-amount">$2,500</div>
+                    <ul>
+                        <li>Professional Website</li>
+                        <li>Monthly Social Management</li>
+                        <li>Content Creation</li>
+                        <li>Monthly Strategy Review</li>
+                    </ul>
+                    <button class="pricing-cta">Get Started</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Scale</h3>
+                    <div class="pricing-amount">Custom</div>
+                    <ul>
+                        <li>Full Marketing Suite</li>
+                        <li>Web + Ads + Social</li>
+                        <li>Weekly Check-ins</li>
+                        <li>Consulting Included</li>
+                    </ul>
+                    <button class="pricing-cta">Schedule Call</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="founder-section">
+        <div class="container">
+            <h2>Meet Ricardo</h2>
+            <div class="founder-content">
+                <p>Ricardo Gattas-Moras brings 17+ years of marketing experience from Fortune 500 companies to small business owners like you. Bilingual (English/Spanish), personally involved, and genuinely committed to your success.</p>
+                <p style="font-style: italic;">"I'm receptive, attentive, and always open to your ideas. Your growth is my growth."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2>Common Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How much does web design cost?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Website projects typically start at $2,500 and go up depending on complexity, features, and functionality. Every project is custom quoted based on your specific needs and goals. We'll provide a transparent estimate during your consultation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can you help with my brand identity?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We offer logo design starting at $350, brand guidelines, color palette development, and complete brand positioning. Whether you need a fresh rebrand or to define your identity from scratch, we can help.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you manage social media accounts?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Our social media management includes monthly content planning, daily posting, community engagement, and analytics reporting. Monthly retainers start at $1,000. We handle everything so you can focus on running your business.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What's your process for paid ads?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We handle Facebook and Instagram ads from strategy through execution. This includes audience research, ad creative design, ongoing optimization, and detailed reporting. We focus on ROI and measurable results.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How often will I see updates?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Weekly check-ins are standard on all projects. You'll get regular updates on progress, metrics, and next steps. Communication and transparency are core to how we work.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you work with businesses outside Houston?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While we specialize in serving Houston-area businesses, we work with clients nationwide. Many of our services are 100% remote-friendly. Let's discuss your specific needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta" id="contact">
+        <h2>Ready to Grow Your Business?</h2>
+        <p>Get your free strategy call from a real marketing expert who knows your market.</p>
+        <div class="cta-buttons">
+            <a href="#" class="btn-primary">Schedule Free Strategy Call</a>
+            <a href="#portfolio" class="btn-secondary">View Full Portfolio</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Poppy Marketing & Consulting. Affordable Marketing for Small Businesses. | <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a></p>
+    </footer>
+
+    <script>
+        // FAQ Accordion Functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
