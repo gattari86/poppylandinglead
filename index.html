@@ -1,4 +1,4 @@
-<!-- Poppy Marketing Landing Page - Updated with brand purple hero (v2) - Deploy: 2025-11-08 -->
+<!-- Poppy Marketing Landing Page - Updated with Mobile Menu & Facebook Pixel (v3) - Deploy: 2025-11-08 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +8,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1170969607223074'); // Replace with your Pixel ID
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1170969607223074&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
     <style>
         * {
             margin: 0;
@@ -85,6 +101,69 @@
 
         nav a:hover {
             color: var(--poppy-purple);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--dark-gray);
+            padding: 10px;
+            transition: all 0.3s ease;
+            z-index: 1001;
+        }
+
+        .mobile-menu-toggle:hover {
+            color: var(--poppy-purple);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--pure-white);
+            flex-direction: column;
+            padding: var(--space-md);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            gap: var(--space-md);
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            padding: var(--space-md);
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            border-bottom: 1px solid var(--border-gray);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--poppy-purple);
+            padding-left: var(--space-lg);
+        }
+
+        .mobile-menu .mobile-cta {
+            background: var(--turquoise);
+            color: var(--pure-white);
+            border-radius: 8px;
+            text-align: center;
+            border: none;
+            padding: var(--space-md) var(--space-lg);
+            margin-top: var(--space-md);
+            font-weight: 700;
         }
 
         .hero {
@@ -886,13 +965,19 @@
 
         @media (max-width: 768px) {
             nav {
-                flex-direction: column;
+                position: relative;
+                flex-direction: row;
+                justify-content: space-between;
                 padding: var(--space-md) var(--space-lg);
                 gap: var(--space-sm);
             }
 
             nav-links {
                 display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
             }
 
             .hero {
@@ -1168,6 +1253,17 @@
             <a href="#pricing">Pricing</a>
             <a href="#faq">FAQ</a>
         </nav-links>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+            <i class="ph ph-list"></i>
+        </button>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#services" onclick="closeMobileMenu()">Services</a>
+            <a href="#portfolio" onclick="closeMobileMenu()">Portfolio</a>
+            <a href="#process" onclick="closeMobileMenu()">Process</a>
+            <a href="#pricing" onclick="closeMobileMenu()">Pricing</a>
+            <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
+            <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="mobile-cta" onclick="closeMobileMenu()">Book Free Consultation</a>
+        </div>
     </nav>
 
     <section class="hero">
@@ -1175,8 +1271,8 @@
             <h1>Small Business Marketing That Gets Results</h1>
             <p>Web design, social media, paid ads, and branding for Houston-area businesses</p>
             <div class="hero-cta-group">
-                <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="hero-cta">Book a free consultation</a>
-                <p class="hero-note">Includes a free market analysis emailed after your consultation to help you understand your business and customers.</p>
+                <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="hero-cta">Schedule Free Consultation</a>
+                <p class="hero-note">FREE 30-minute consultation • Responses within 24 hours • No credit card required • Includes free market analysis emailed after your consultation</p>
             </div>
         </div>
     </section>
@@ -1377,7 +1473,7 @@
                         <li>High-resolution file formats</li>
                         <li>Brand color palette</li>
                     </ul>
-                    <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="pricing-cta">Get Started</a>
+                    <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="pricing-cta">Schedule Consultation</a>
                 </div>
                 <div class="pricing-card">
                     <h3>One-Page Website</h3>
@@ -1390,7 +1486,7 @@
                         <li>SEO optimization</li>
                         <li>Fast loading speed</li>
                     </ul>
-                    <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="pricing-cta">Get Started</a>
+                    <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="pricing-cta">Schedule Consultation</a>
                 </div>
                 <div class="pricing-card">
                     <h3>Meta/Google Ads</h3>
@@ -1404,7 +1500,7 @@
                         <li>Monthly reporting</li>
                         <li style="font-style: italic; color: var(--poppy-purple); font-weight: 600;">Note: Ad spend is separate</li>
                     </ul>
-                    <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="pricing-cta">Get Started</a>
+                    <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="pricing-cta">Schedule Consultation</a>
                 </div>
             </div>
         </div>
@@ -1504,6 +1600,30 @@
     </div>
 
     <script>
+        // Mobile Menu functionality
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('active');
+        }
+
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('nav')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close mobile menu on scroll
+        window.addEventListener('scroll', closeMobileMenu);
+
         // FAQ functionality
         const faqItems = document.querySelectorAll('.faq-item');
         faqItems.forEach(item => {
@@ -1545,6 +1665,26 @@
             if (e.key === 'Escape' && modal.classList.contains('active')) {
                 closeModal();
             }
+        });
+
+        // Facebook Pixel Event Tracking
+        // Track Lead event when users click any CTA button
+        const ctaLinks = document.querySelectorAll('a[href*="booking-calendar"]');
+        ctaLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                // Track Lead event
+                fbq('track', 'Lead', {
+                    content_name: 'Free Consultation',
+                    content_category: 'consultation'
+                });
+            });
+        });
+
+        // Track ViewContent when page loads
+        fbq('track', 'ViewContent', {
+            content_type: 'product',
+            content_ids: ['landing_page'],
+            content_name: 'Free Consultation Landing Page'
         });
     </script>
 </body>
