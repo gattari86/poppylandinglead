@@ -273,6 +273,12 @@
 
         .benefit-icon i {
             font-size: 2.5rem;
+            color: var(--poppy-purple);
+            font-weight: 700;
+        }
+
+        .benefit-icon i::before {
+            font-weight: bold;
         }
 
         .benefit-card h3 {
@@ -297,8 +303,8 @@
 
         .portfolio-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--space-3xl);
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-2xl);
             margin-top: var(--space-3xl);
         }
 
@@ -310,8 +316,10 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             cursor: pointer;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: stretch;
+            position: relative;
+            height: 100%;
         }
 
         .portfolio-card:hover {
@@ -320,8 +328,8 @@
         }
 
         .portfolio-image {
-            width: 50%;
-            min-height: 300px;
+            width: 100%;
+            height: 200px;
             background: linear-gradient(135deg, var(--light-gray), var(--border-gray));
             display: flex;
             align-items: center;
@@ -338,12 +346,13 @@
         }
 
         .portfolio-body {
-            padding: var(--space-2xl);
+            padding: var(--space-lg);
             display: flex;
             flex-direction: column;
-            gap: var(--space-md);
-            width: 50%;
-            justify-content: center;
+            gap: var(--space-sm);
+            width: 100%;
+            justify-content: flex-start;
+            flex-grow: 1;
         }
 
         .portfolio-caption {
@@ -1189,38 +1198,38 @@
             <h2>Pricing That Works for You</h2>
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <h3>Starter</h3>
-                    <p style="margin-bottom: var(--space-lg); font-size: 0.95rem;">Perfect for new businesses</p>
-                    <div class="pricing-amount">$500</div>
+                    <h3><i class="ph ph-palette"></i> Logo Design</h3>
+                    <p style="margin-bottom: var(--space-lg); font-size: 0.95rem;">Brand Identity Package</p>
+                    <div class="pricing-amount">$350+</div>
                     <ul>
-                        <li>Logo design or basic web presence</li>
-                        <li>Social media setup</li>
-                        <li>One month management included</li>
-                        <li>Email support</li>
+                        <li>Custom brand logo design</li>
+                        <li>All source files included</li>
+                        <li>Unlimited revisions</li>
+                        <li>Professional branding package</li>
                     </ul>
                     <button class="pricing-cta">Get Started</button>
                 </div>
                 <div class="pricing-card">
-                    <h3>Growth</h3>
-                    <p style="margin-bottom: var(--space-lg); font-size: 0.95rem;">Most popular</p>
-                    <div class="pricing-amount">$2,500</div>
+                    <h3><i class="ph ph-globe"></i> Web Design</h3>
+                    <p style="margin-bottom: var(--space-lg); font-size: 0.95rem;">Most Popular - Full Package</p>
+                    <div class="pricing-amount">$1,200+</div>
                     <ul>
-                        <li>Professional website or comprehensive branding</li>
-                        <li>Monthly social media management</li>
-                        <li>Content creation (4 pieces/month)</li>
-                        <li>Quarterly strategy reviews</li>
+                        <li>Professional, conversion-focused website</li>
+                        <li>Responsive mobile design</li>
+                        <li>SEO optimization included</li>
+                        <li>3 months ongoing support</li>
                     </ul>
                     <button class="pricing-cta">Schedule Consultation</button>
                 </div>
                 <div class="pricing-card">
-                    <h3>Scale</h3>
-                    <p style="margin-bottom: var(--space-lg); font-size: 0.95rem;">For growing companies</p>
-                    <div class="pricing-amount">Custom</div>
+                    <h3><i class="ph ph-megaphone"></i> Meta Ads Management</h3>
+                    <p style="margin-bottom: var(--space-lg); font-size: 0.95rem;">Performance & Growth</p>
+                    <div class="pricing-amount">$500+</div>
                     <ul>
-                        <li>Full-service marketing suite</li>
-                        <li>Paid advertising campaigns</li>
-                        <li>Advanced analytics and reporting</li>
-                        <li>Dedicated account management</li>
+                        <li>Performance-based ad campaigns</li>
+                        <li>Monthly optimization & reporting</li>
+                        <li>Audience targeting & retargeting</li>
+                        <li>ROI-focused strategy</li>
                     </ul>
                     <button class="pricing-cta">Contact Us</button>
                 </div>
