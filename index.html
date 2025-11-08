@@ -1,4 +1,4 @@
-<!-- Poppy Marketing Landing Page - Updated with brand purple hero (v3 - force rebuild 2025-11-08) -->
+<!-- Poppy Marketing Landing Page - Updated with brand purple hero (v2) - Deploy: 2025-11-08 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poppy Marketing & Consulting - Affordable Marketing for Small Businesses</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
     <style>
         * {
             margin: 0;
@@ -20,21 +21,22 @@
             --accent-teal: #47a3c2;
             --pink-coral: #ff6b8b;
             --turquoise: #30d1b0;
-            --mint-green: #66D9B5;
             --dark-purple: #53498c;
             --light-gray: #f5f7fa;
             --dark-gray: #333333;
             --pure-white: #ffffff;
             --border-gray: #e0e0e0;
 
+            /* Consistent 8px spacing scale for clean alignment */
             --space-xs: 8px;
-            --space-sm: 12px;
-            --space-md: 16px;
-            --space-lg: 24px;
-            --space-xl: 32px;
-            --space-2xl: 48px;
-            --space-3xl: 64px;
-            --space-4xl: 80px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 40px;
+            --space-2xl: 56px;
+            --space-3xl: 72px;
+            --space-4xl: 96px;
+            --space-5xl: 120px;
         }
 
         body {
@@ -46,7 +48,7 @@
 
         nav {
             background: var(--pure-white);
-            padding: var(--space-md) var(--space-xl);
+            padding: var(--space-md) var(--space-2xl);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -86,44 +88,31 @@
         }
 
         .hero {
-            background: var(--dark-purple);
+            background: linear-gradient(135deg, var(--poppy-purple) 0%, rgba(159, 125, 255, 0.8) 100%);
             color: var(--pure-white);
-            padding: 120px var(--space-xl);
+            padding: var(--space-5xl) var(--space-2xl);
             text-align: center;
-            min-height: 750px;
+            min-height: 700px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: var(--space-4xl);
+            gap: var(--space-xl);
             position: relative;
             overflow: hidden;
         }
 
-
         .hero::before {
             content: '';
             position: absolute;
-            top: -100px;
-            right: -100px;
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--mint-green) 0%, rgba(102, 217, 181, 0.3) 100%);
-            opacity: 0.15;
-            z-index: 0;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -80px;
-            left: -80px;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--poppy-purple) 0%, rgba(159, 125, 255, 0.3) 100%);
-            opacity: 0.12;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('public/images/poppy-field.png') no-repeat center center;
+            background-size: cover;
+            opacity: 0.25;
+            pointer-events: none;
             z-index: 0;
         }
 
@@ -132,120 +121,100 @@
             z-index: 1;
         }
 
-        .hero-content::before {
-            content: '';
-            position: absolute;
-            top: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 150px;
-            height: 3px;
-            background: linear-gradient(90deg, transparent 0%, var(--mint-green) 50%, transparent 100%);
-            opacity: 0.4;
-            z-index: -1;
-        }
-
         .hero h1 {
             font-family: 'Poppins', sans-serif;
-            font-size: 3.5rem;
+            font-size: 3.75rem;
             font-weight: 700;
-            line-height: 1.2;
-            margin: 0 0 var(--space-2xl) 0;
+            line-height: 1.15;
+            margin: 0 0 var(--space-md) 0;
             max-width: 900px;
+            letter-spacing: -1px;
         }
 
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             max-width: 750px;
             opacity: 0.95;
-            font-weight: 300;
-            margin: 0 0 var(--space-3xl) 0;
-            line-height: 1.7;
+            font-weight: 400;
+            margin: 0;
+            line-height: 1.6;
         }
 
         .hero-cta-group {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            gap: var(--space-lg);
-            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-top: var(--space-md);
         }
 
         .hero-cta {
             display: inline-block;
-            padding: 18px 48px;
+            padding: 20px 56px;
             background: var(--turquoise);
             color: var(--pure-white);
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 12px;
             font-weight: 700;
-            font-size: 1.1rem;
-            box-shadow: 0 8px 24px rgba(48, 209, 176, 0.35);
+            font-size: 1.15rem;
+            box-shadow: 0 12px 32px rgba(48, 209, 176, 0.4);
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
+            font-family: 'Poppins', sans-serif;
         }
 
         .hero-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 32px rgba(48, 209, 176, 0.45);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(48, 209, 176, 0.5);
+            background: #28bfa0;
         }
 
+        .hero-note {
+            font-size: 0.9rem;
+            max-width: 600px;
+            opacity: 0.9;
+            font-style: italic;
+            line-height: 1.6;
+        }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 var(--space-xl);
+            padding: 0 var(--space-2xl);
         }
 
         section {
-            padding: var(--space-4xl) 0;
-        }
-
-        section:not(:first-of-type) {
-            margin-top: var(--space-2xl);
+            padding: var(--space-5xl) 0;
         }
 
         section h2 {
             font-family: 'Poppins', sans-serif;
-            font-size: 3.2rem;
+            font-size: 2.8rem;
             font-weight: 700;
-            margin-bottom: var(--space-3xl);
+            margin-bottom: var(--space-2xl);
             text-align: center;
             color: var(--dark-gray);
-            letter-spacing: -0.8px;
-            line-height: 1.3;
-        }
-
-        section h2::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--poppy-purple);
-            margin: var(--space-xl) auto 0;
-            border-radius: 2px;
+            letter-spacing: -0.5px;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-            gap: var(--space-3xl);
-            margin-top: var(--space-3xl);
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-2xl);
         }
 
         .service-card {
             background: var(--pure-white);
-            padding: var(--space-3xl);
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            padding: var(--space-xl);
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
-            height: 100%;
         }
 
         .service-card:hover {
@@ -253,61 +222,41 @@
             box-shadow: 0 12px 32px rgba(159, 125, 255, 0.15);
         }
 
-        .service-icon {
-            font-size: 3rem;
-            color: var(--mint-green) !important;
-            margin-bottom: var(--space-lg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 80px;
-            width: 80px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .service-icon i {
-            color: var(--mint-green) !important;
-            font-size: 3rem;
-        }
-
         .service-card h3 {
             font-family: 'Poppins', sans-serif;
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--poppy-purple);
-            margin-bottom: var(--space-md);
-            letter-spacing: 0.3px;
+            margin-bottom: var(--space-sm);
+            letter-spacing: -0.3px;
         }
 
         .service-card p {
             color: var(--dark-gray);
-            font-size: 1rem;
+            font-size: 1.05rem;
             line-height: 1.7;
             margin: 0;
         }
 
         .why-choose-section {
             background: linear-gradient(to bottom, var(--light-gray), var(--pure-white));
-            padding: var(--space-4xl) 0;
+            padding: var(--space-5xl) 0;
         }
 
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--space-3xl);
-            margin-top: var(--space-3xl);
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-2xl);
         }
 
         .benefit-card {
             background: var(--pure-white);
-            padding: var(--space-3xl) var(--space-2xl);
-            border-radius: 12px;
+            padding: var(--space-xl);
+            border-radius: 16px;
             text-align: center;
             transition: all 0.3s ease;
             border-top: 4px solid var(--poppy-purple);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-            height: 100%;
         }
 
         .benefit-card:hover {
@@ -316,59 +265,50 @@
         }
 
         .benefit-icon {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: var(--space-md);
             height: 60px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--mint-green);
-        }
-
-        .benefit-icon i {
-            font-size: 2.5rem;
-            color: var(--mint-green) !important;
+            color: var(--poppy-purple);
         }
 
         .benefit-card h3 {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             font-weight: 700;
             color: var(--dark-gray);
             margin-bottom: var(--space-sm);
+            letter-spacing: -0.3px;
         }
 
         .benefit-card p {
-            font-size: 0.95rem;
-            line-height: 1.6;
+            font-size: 1rem;
+            line-height: 1.65;
             color: var(--dark-gray);
             margin: 0;
         }
 
         .portfolio-section {
             background: var(--light-gray);
-            padding: var(--space-4xl) 0;
+            padding: var(--space-5xl) 0;
         }
 
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--space-3xl);
-            margin-top: var(--space-3xl);
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-2xl);
         }
 
         .portfolio-card {
             background: var(--pure-white);
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
             cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-            position: relative;
-            height: 100%;
         }
 
         .portfolio-card:hover {
@@ -379,19 +319,17 @@
         .portfolio-image {
             width: 100%;
             height: 200px;
-            background: linear-gradient(135deg, var(--light-gray), var(--border-gray));
+            background: var(--light-gray);
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            flex-shrink: 0;
         }
 
         .portfolio-image img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            padding: var(--space-md);
         }
 
         .portfolio-body {
@@ -399,9 +337,6 @@
             display: flex;
             flex-direction: column;
             gap: var(--space-sm);
-            width: 100%;
-            justify-content: flex-start;
-            flex-grow: 1;
         }
 
         .portfolio-caption {
@@ -429,20 +364,20 @@
 
         .process-section {
             background: var(--pure-white);
-            padding: var(--space-4xl) 0;
+            padding: var(--space-5xl) 0;
         }
 
         .process-timeline {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: var(--space-2xl);
-            margin-top: var(--space-3xl);
+            gap: var(--space-lg);
+            margin-top: var(--space-2xl);
         }
 
         .process-step {
             background: var(--light-gray);
-            padding: var(--space-2xl);
-            border-radius: 12px;
+            padding: var(--space-xl);
+            border-radius: 16px;
             text-align: center;
             position: relative;
             transition: all 0.3s ease;
@@ -495,41 +430,22 @@
 
         .testimonials-section {
             background: linear-gradient(to bottom, var(--light-gray), var(--pure-white));
-            padding: var(--space-4xl) 0;
+            padding: var(--space-5xl) 0;
         }
 
         .testimonial-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: var(--space-3xl);
-            margin-top: var(--space-3xl);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-2xl);
         }
 
         .testimonial-card {
             background: var(--pure-white);
-            padding: var(--space-3xl) var(--space-2xl);
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            padding: var(--space-xl);
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
             border-left: 5px solid var(--poppy-purple);
-            height: 100%;
-            transition: all 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-            box-shadow: 0 8px 24px rgba(159, 125, 255, 0.12);
-            transform: translateY(-4px);
-        }
-
-        .testimonial-stars {
-            display: flex;
-            gap: 4px;
-            margin-bottom: var(--space-md);
-            font-size: 1.2rem;
-        }
-
-        .testimonial-stars i {
-            color: #ffc107 !important;
-            font-size: 1.2rem;
         }
 
         .testimonial-card p {
@@ -548,25 +464,24 @@
 
         .pricing-section {
             background: var(--pure-white);
-            padding: var(--space-4xl) 0;
+            padding: var(--space-5xl) 0;
         }
 
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: var(--space-3xl);
-            margin-top: var(--space-3xl);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-2xl);
         }
 
         .pricing-card {
             background: var(--pure-white);
-            padding: var(--space-3xl) var(--space-2xl);
-            border-radius: 12px;
+            padding: var(--space-xl);
+            border-radius: 16px;
             border-top: 5px solid var(--poppy-purple);
             text-align: center;
             transition: all 0.3s;
-            height: 100%;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
         }
 
         .pricing-card:nth-child(2) {
@@ -589,14 +504,6 @@
             margin-bottom: var(--space-md);
             font-weight: 700;
             letter-spacing: 0.3px;
-            display: flex;
-            align-items: center;
-            gap: var(--space-md);
-        }
-
-        .pricing-card h3 i {
-            color: var(--mint-green) !important;
-            font-size: 1.8rem;
         }
 
         .pricing-amount {
@@ -628,31 +535,32 @@
         .pricing-cta {
             display: block;
             width: 100%;
-            padding: 16px var(--space-2xl);
+            padding: 16px var(--space-lg);
             background: var(--poppy-purple);
             color: var(--pure-white);
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 10px;
             font-weight: 700;
             transition: all 0.3s;
             border: none;
             cursor: pointer;
             font-size: 1rem;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            box-shadow: 0 4px 15px rgba(159, 125, 255, 0.2);
+            letter-spacing: 0.8px;
+            box-shadow: 0 6px 20px rgba(159, 125, 255, 0.25);
+            font-family: 'Poppins', sans-serif;
         }
 
         .pricing-cta:hover {
-            background: rgba(159, 125, 255, 0.9);
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(159, 125, 255, 0.3);
+            background: #8a65e6;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(159, 125, 255, 0.35);
         }
 
         .founder-section {
             background: linear-gradient(135deg, var(--poppy-purple) 0%, rgba(159, 125, 255, 0.8) 100%);
             color: var(--pure-white);
-            padding: var(--space-4xl) var(--space-xl);
+            padding: var(--space-5xl) var(--space-2xl);
             text-align: center;
         }
 
@@ -676,20 +584,20 @@
 
         .faq-section {
             background: var(--light-gray);
-            padding: var(--space-4xl) 0;
+            padding: var(--space-5xl) 0;
         }
 
         .faq-container {
             max-width: 750px;
-            margin: var(--space-3xl) auto 0;
+            margin: var(--space-2xl) auto 0;
         }
 
         .faq-item {
             background: var(--pure-white);
-            margin-bottom: var(--space-md);
-            border-radius: 8px;
+            margin-bottom: var(--space-sm);
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
             transition: all 0.3s;
         }
 
@@ -741,7 +649,7 @@
             background: linear-gradient(135deg, var(--poppy-purple) 0%, var(--dark-purple) 100%);
             color: var(--pure-white);
             text-align: center;
-            padding: var(--space-4xl) var(--space-xl);
+            padding: var(--space-5xl) var(--space-2xl);
         }
 
         .final-cta h2 {
@@ -769,174 +677,73 @@
         }
 
         .btn-primary {
-            padding: 16px 36px;
+            padding: 20px var(--space-xl);
             background: var(--turquoise);
             color: var(--pure-white);
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 12px;
             font-weight: 700;
             font-size: 1.1rem;
             transition: all 0.3s;
             border: none;
             cursor: pointer;
-            box-shadow: 0 8px 24px rgba(48, 209, 176, 0.35);
+            box-shadow: 0 12px 32px rgba(48, 209, 176, 0.35);
             text-transform: uppercase;
-            letter-spacing: 0.6px;
-            display: inline-block;
+            letter-spacing: 1px;
+            font-family: 'Poppins', sans-serif;
         }
 
         .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 14px 36px rgba(48, 209, 176, 0.45);
-            background: #1ec3b4;
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(48, 209, 176, 0.45);
+            background: #28bfa0;
         }
 
         .btn-secondary {
-            padding: 16px 36px;
+            padding: 20px var(--space-xl);
             background: transparent;
             color: var(--pure-white);
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 12px;
             font-weight: 700;
             font-size: 1.1rem;
-            border: 2px solid var(--pure-white);
+            border: 3px solid var(--pure-white);
             transition: all 0.3s;
             cursor: pointer;
             text-transform: uppercase;
-            letter-spacing: 0.6px;
-            display: inline-block;
+            letter-spacing: 1px;
+            font-family: 'Poppins', sans-serif;
         }
 
         .btn-secondary:hover {
             background: var(--pure-white);
             color: var(--poppy-purple);
-            transform: translateY(-3px);
+            transform: translateY(-4px);
             box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
         }
 
-        /* Lightbox Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            animation: fadeIn 0.3s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .modal-content {
-            position: relative;
-            margin: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
-
-        .modal-image {
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
-            animation: zoomIn 0.3s ease-in-out;
-        }
-
-        @keyframes zoomIn {
-            from { transform: scale(0.8); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-
-        .close {
-            position: absolute;
-            right: 35px;
-            top: 15px;
-            color: var(--pure-white);
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-            z-index: 2001;
-        }
-
-        .close:hover {
-            color: var(--poppy-purple);
-        }
-
-        /* Footer */
         footer {
             background: #1a1a1a;
             color: var(--pure-white);
-            padding: var(--space-2xl) var(--space-xl);
-            font-size: 0.95rem;
-            opacity: 0.95;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--space-2xl);
+            padding: var(--space-xl) var(--space-2xl);
             text-align: center;
-        }
-
-        .footer-section {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-sm);
-        }
-
-        .footer-section p {
-            margin: 0;
+            font-size: 0.95rem;
+            opacity: 0.9;
             line-height: 1.6;
         }
 
         footer a {
             color: var(--turquoise);
             text-decoration: none;
-            transition: color 0.3s;
         }
 
         footer a:hover {
-            color: var(--poppy-purple);
-        }
-
-        footer i {
-            color: var(--mint-green) !important;
-            margin-right: 8px;
-            font-size: 1.1rem;
-        }
-
-        footer a:hover i {
-            color: var(--mint-green) !important;
-        }
-
-        .btn-call {
-            display: inline-block;
-            padding: 12px 24px;
-            background: var(--poppy-purple);
-            color: var(--pure-white);
-            border-radius: 8px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.3s;
-            margin-top: var(--space-sm);
-        }
-
-        .btn-call:hover {
-            background: #8a5fb0;
-            transform: translateY(-2px);
+            text-decoration: underline;
         }
 
         @media (max-width: 1024px) {
             .container {
-                padding: 0 var(--space-lg);
+                padding: 0 var(--space-xl);
             }
 
             section {
@@ -944,12 +751,8 @@
             }
 
             section h2 {
-                font-size: 2.8rem;
-                margin-bottom: var(--space-3xl);
-            }
-
-            section h2::after {
-                margin-top: var(--space-lg);
+                font-size: 2.5rem;
+                margin-bottom: var(--space-xl);
             }
 
             .services-grid,
@@ -958,26 +761,20 @@
             .testimonial-grid,
             .pricing-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: var(--space-3xl);
+                gap: var(--space-md);
             }
 
             .process-timeline {
                 grid-template-columns: repeat(2, 1fr);
-                gap: var(--space-3xl);
-            }
-
-            .btn-primary,
-            .btn-secondary {
-                font-size: 1rem;
-                padding: 14px 32px;
+                gap: var(--space-md);
             }
         }
 
         @media (max-width: 768px) {
             nav {
                 flex-direction: column;
-                padding: var(--space-md) var(--space-lg);
-                gap: var(--space-md);
+                padding: var(--space-sm) var(--space-lg);
+                gap: var(--space-sm);
             }
 
             nav-links {
@@ -985,39 +782,37 @@
             }
 
             .hero {
-                padding: var(--space-3xl) var(--space-lg);
-                gap: var(--space-2xl);
+                padding: var(--space-4xl) var(--space-lg);
+                gap: var(--space-lg);
                 min-height: auto;
             }
 
+            .hero::before {
+                opacity: 0.18;
+            }
 
             .hero h1 {
-                font-size: 2.2rem;
-                line-height: 1.3;
+                font-size: 2.5rem;
+                line-height: 1.2;
+                letter-spacing: -0.5px;
             }
 
             .hero p {
-                font-size: 1.05rem;
+                font-size: 1.15rem;
             }
 
             .hero-cta {
-                padding: 16px var(--space-xl);
-                font-size: 1rem;
+                padding: 18px var(--space-xl);
+                font-size: 1.05rem;
             }
 
             section {
-                padding: var(--space-3xl) 0;
-                margin-top: var(--space-xl);
+                padding: var(--space-4xl) 0;
             }
 
             section h2 {
-                font-size: 2.4rem;
-                margin-bottom: var(--space-3xl);
-                line-height: 1.3;
-            }
-
-            section h2::after {
-                margin-top: var(--space-lg);
+                font-size: 2.2rem;
+                margin-bottom: var(--space-xl);
             }
 
             .container {
@@ -1031,20 +826,7 @@
             .pricing-grid,
             .process-timeline {
                 grid-template-columns: 1fr;
-                gap: var(--space-3xl);
-            }
-
-            .portfolio-card {
-                flex-direction: column;
-            }
-
-            .portfolio-image,
-            .portfolio-body {
-                width: 100%;
-            }
-
-            .portfolio-image {
-                min-height: 250px;
+                gap: var(--space-md);
             }
 
             .pricing-card:nth-child(2) {
@@ -1056,109 +838,79 @@
             .portfolio-card,
             .testimonial-card,
             .pricing-card {
-                padding: var(--space-2xl) var(--space-xl);
-            }
-
-            .service-card {
-                padding: var(--space-3xl) var(--space-2xl);
-            }
-
-            .benefit-card {
-                padding: var(--space-2xl) var(--space-lg);
-            }
-
-            .testimonial-card {
-                padding: var(--space-2xl) var(--space-lg);
-            }
-
-            .pricing-card {
-                padding: var(--space-3xl) var(--space-xl);
-            }
-
-            .btn-primary,
-            .btn-secondary {
-                width: 100%;
-                padding: 16px var(--space-lg);
-                font-size: 1rem;
+                padding: var(--space-lg);
             }
 
             .final-cta {
-                padding: var(--space-3xl) var(--space-lg);
+                padding: var(--space-4xl) var(--space-lg);
             }
 
             .final-cta h2 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             .cta-buttons {
                 flex-direction: column;
                 align-items: stretch;
-                gap: var(--space-lg);
+                gap: var(--space-md);
             }
 
             .btn-primary,
             .btn-secondary {
                 width: 100%;
-                padding: 16px var(--space-lg);
+                padding: 18px var(--space-lg);
             }
 
             .founder-section {
-                padding: var(--space-3xl) var(--space-lg);
+                padding: var(--space-4xl) var(--space-lg);
             }
 
             .faq-container {
-                margin: var(--space-2xl) auto 0;
+                margin: var(--space-xl) auto 0;
             }
         }
 
         @media (max-width: 480px) {
             nav {
-                padding: var(--space-sm) var(--space-md);
-                gap: var(--space-sm);
+                padding: var(--space-sm) var(--space-sm);
+                gap: var(--space-xs);
             }
 
-            .logo-section {
-                font-size: 1.5rem;
+            .logo-section img {
+                height: 40px;
             }
 
             .hero {
-                padding: var(--space-2xl) var(--space-md);
-                gap: var(--space-xl);
+                padding: var(--space-3xl) var(--space-sm);
+                gap: var(--space-md);
             }
 
             .hero h1 {
-                font-size: 5.4rem;
+                font-size: 2rem;
                 line-height: 1.2;
+                letter-spacing: -0.5px;
             }
 
             .hero p {
-                font-size: 0.95rem;
+                font-size: 1.05rem;
             }
 
             .hero-cta {
-                padding: 14px var(--space-lg);
-                font-size: 0.9rem;
+                padding: 16px var(--space-lg);
+                font-size: 1rem;
             }
 
             section {
                 padding: var(--space-3xl) 0;
-                margin-top: var(--space-lg);
             }
 
             section h2 {
-                font-size: 1.8rem;
-                margin-bottom: var(--space-2xl);
-                line-height: 1.3;
-            }
-
-            section h2::after {
-                width: 60px;
-                height: 3px;
-                margin-top: var(--space-md);
+                font-size: 1.85rem;
+                margin-bottom: var(--space-md);
             }
 
             .container {
-                padding: 0 var(--space-md);
+                padding: 0 var(--space-sm);
             }
 
             .services-grid,
@@ -1167,7 +919,7 @@
             .testimonial-grid,
             .pricing-grid,
             .process-timeline {
-                gap: var(--space-2xl);
+                gap: var(--space-sm);
             }
 
             .service-card,
@@ -1175,32 +927,7 @@
             .portfolio-card,
             .testimonial-card,
             .pricing-card {
-                padding: var(--space-2xl) var(--space-lg);
-            }
-
-            .service-icon {
-                height: 60px;
-                width: 60px;
-            }
-
-            .service-icon i {
-                font-size: 2.5rem;
-            }
-
-            .benefit-icon {
-                font-size: 2rem;
-                height: 50px;
-            }
-
-            .benefit-icon i {
-                font-size: 2rem;
-            }
-
-            .btn-primary,
-            .btn-secondary {
-                width: 100%;
-                padding: 14px var(--space-lg);
-                font-size: 0.95rem;
+                padding: var(--space-md);
             }
 
             .pricing-card h3 {
@@ -1208,56 +935,56 @@
             }
 
             .pricing-amount {
-                font-size: 1.8rem;
+                font-size: 1.9rem;
             }
 
             .final-cta {
-                padding: var(--space-2xl) var(--space-md);
+                padding: var(--space-3xl) var(--space-sm);
             }
 
             .final-cta h2 {
-                font-size: 1.6rem;
+                font-size: 1.85rem;
             }
 
             .final-cta p {
-                font-size: 1rem;
-                margin-bottom: var(--space-lg);
+                font-size: 1.05rem;
+                margin-bottom: var(--space-md);
             }
 
             .btn-primary,
             .btn-secondary {
-                padding: 14px var(--space-md);
-                font-size: 0.9rem;
-            }
-
-            .founder-section {
-                padding: var(--space-2xl) var(--space-md);
-            }
-
-            .founder-section h2 {
-                font-size: 1.6rem;
-            }
-
-            .founder-section p {
+                padding: 16px var(--space-md);
                 font-size: 1rem;
             }
 
+            .founder-section {
+                padding: var(--space-3xl) var(--space-sm);
+            }
+
+            .founder-section h2 {
+                font-size: 1.85rem;
+            }
+
+            .founder-section p {
+                font-size: 1.05rem;
+            }
+
             .faq-question {
-                padding: var(--space-md);
-                font-size: 0.95rem;
+                padding: var(--space-sm);
+                font-size: 1rem;
             }
 
             .faq-answer {
-                font-size: 0.9rem;
+                font-size: 0.95rem;
             }
 
             .faq-item.active .faq-answer {
-                padding: var(--space-md);
+                padding: var(--space-sm);
             }
 
             footer {
-                padding: var(--space-lg) var(--space-md);
-                font-size: 0.85rem;
+                padding: var(--space-md) var(--space-sm);
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -1278,10 +1005,11 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Clearer Skin in as Soon as 2 Weeks</h1>
+            <h1>Small Business Marketing That Gets Results</h1>
             <p>Web design, social media, paid ads, and branding for Houston-area businesses</p>
             <div class="hero-cta-group">
                 <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="hero-cta">Book a free consultation</a>
+                <p class="hero-note">Includes a free market analysis emailed after your consultation to help you understand your business and customers.</p>
             </div>
         </div>
     </section>
@@ -1290,17 +1018,14 @@
         <h2>Our Offers</h2>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
                 <h3>Logo Design</h3>
-                <p>Custom brand logos that establish a strong visual identity. Professional logo package with all source files included. Starting at $350.</p>
+                <p>Custom brand logos that establish a strong visual identity. Starting at $250.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
                 <h3>Web Design</h3>
                 <p>Professional websites designed to convert visitors into customers. Starting at $1,200.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div>
                 <h3>Meta Ads Management</h3>
                 <p>Performance-based advertising campaigns to reach your ideal customers. Starting at $500.</p>
             </div>
@@ -1312,27 +1037,27 @@
             <h2>Why Small Businesses Love Poppy</h2>
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <div class="benefit-icon"><i class="fa-solid fa-gem"></i></div>
+                    <div class="benefit-icon"><i class="ph ph-diamond"></i></div>
                     <h3>Affordable Pricing</h3>
                     <p>No hidden fees. Transparent quotes and flexible payment options for every budget.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon"><i class="fa-solid fa-users"></i></div>
+                    <div class="benefit-icon"><i class="ph ph-users"></i></div>
                     <h3>Personalized Attention</h3>
                     <p>Weekly check-ins and direct communication. You'll never be handed off to juniors.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon"><i class="fa-solid fa-earth-americas"></i></div>
+                    <div class="benefit-icon"><i class="ph ph-translate"></i></div>
                     <h3>Bilingual Expertise</h3>
                     <p>English and Spanish services for Houston's diverse business community.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon"><i class="fa-solid fa-star"></i></div>
+                    <div class="benefit-icon"><i class="ph ph-certificate"></i></div>
                     <h3>Fortune 500 Experience</h3>
                     <p>17+ years marketing expertise from major corporations, applied to your business.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="benefit-icon"><i class="ph ph-chart-line-up"></i></div>
                     <h3>Proven Results</h3>
                     <p>5-star reputation with verified reviews proving our commitment to client success.</p>
                 </div>
@@ -1431,25 +1156,16 @@
             <h2>Client Success Stories</h2>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p>"Professional, knowledgeable, attentive and perceptive. The creativity and superb work all around exceeded my expectations. They understood exactly what was needed to market strategically and build a site that would establish our brand."</p>
-                    <div class="testimonial-author">- Verified Client Review</div>
+                    <p>"Poppy transformed our online presence in just three months. We've seen a 40% increase in qualified leads."</p>
+                    <div class="testimonial-author">- Sarah Martinez, Local Retail Owner</div>
                 </div>
                 <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p>"Working with Poppy has been an absolute game-changer for our business. I'm impressed by their professionalism and deep understanding of strategy and marketing. They didn't offer cookie-cutter solutions but took time to understand our goals and crafted a customized approach."</p>
-                    <div class="testimonial-author">- Verified Client Review</div>
+                    <p>"The team understood our brand immediately and created marketing materials that truly represent us."</p>
+                    <div class="testimonial-author">- James Chen, Service Business Owner</div>
                 </div>
                 <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p>"They consistently went above and beyond with assistance on our website, displaying professionalism, expertise, and genuine interest in our vision, delivering a website that was both visually impressive and operated flawlessly."</p>
-                    <div class="testimonial-author">- Verified Client Review</div>
+                    <p>"Professional, responsive, and results-driven. Exactly what a growing small business needs."</p>
+                    <div class="testimonial-author">- Michelle Rodriguez, E-commerce Entrepreneur</div>
                 </div>
             </div>
         </div>
@@ -1460,38 +1176,38 @@
             <h2>Pricing That Works for You</h2>
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <h3><i class="fa-solid fa-palette"></i> Logo Design</h3>
-                    <p style="margin-bottom: var(--space-lg); font-size: 0.95rem;">Brand Identity Package</p>
-                    <div class="pricing-amount">$350+</div>
+                    <h3>Starter</h3>
+                    <p style="margin-bottom: var(--space-lg); font-size: 0.95rem;">Perfect for new businesses</p>
+                    <div class="pricing-amount">$500</div>
                     <ul>
-                        <li>Custom brand logo design</li>
-                        <li>All source files included</li>
-                        <li>Unlimited revisions</li>
-                        <li>Professional branding package</li>
+                        <li>Logo design or basic web presence</li>
+                        <li>Social media setup</li>
+                        <li>One month management included</li>
+                        <li>Email support</li>
                     </ul>
                     <button class="pricing-cta">Get Started</button>
                 </div>
                 <div class="pricing-card">
-                    <h3><i class="fa-solid fa-globe"></i> Web Design</h3>
-                    <p style="margin-bottom: var(--space-lg); font-size: 0.95rem;">Most Popular - Full Package</p>
-                    <div class="pricing-amount">$1,200+</div>
+                    <h3>Growth</h3>
+                    <p style="margin-bottom: var(--space-lg); font-size: 0.95rem;">Most popular</p>
+                    <div class="pricing-amount">$2,500</div>
                     <ul>
-                        <li>Professional, conversion-focused website</li>
-                        <li>Responsive mobile design</li>
-                        <li>SEO optimization included</li>
-                        <li>3 months ongoing support</li>
+                        <li>Professional website or comprehensive branding</li>
+                        <li>Monthly social media management</li>
+                        <li>Content creation (4 pieces/month)</li>
+                        <li>Quarterly strategy reviews</li>
                     </ul>
                     <button class="pricing-cta">Schedule Consultation</button>
                 </div>
                 <div class="pricing-card">
-                    <h3><i class="fa-solid fa-bullhorn"></i> Meta Ads Management</h3>
-                    <p style="margin-bottom: var(--space-lg); font-size: 0.95rem;">Performance & Growth</p>
-                    <div class="pricing-amount">$500+</div>
+                    <h3>Scale</h3>
+                    <p style="margin-bottom: var(--space-lg); font-size: 0.95rem;">For growing companies</p>
+                    <div class="pricing-amount">Custom</div>
                     <ul>
-                        <li>Performance-based ad campaigns</li>
-                        <li>Monthly optimization & reporting</li>
-                        <li>Audience targeting & retargeting</li>
-                        <li>ROI-focused strategy</li>
+                        <li>Full-service marketing suite</li>
+                        <li>Paid advertising campaigns</li>
+                        <li>Advanced analytics and reporting</li>
+                        <li>Dedicated account management</li>
                     </ul>
                     <button class="pricing-cta">Contact Us</button>
                 </div>
@@ -1577,67 +1293,21 @@
             <p>Let's talk about your goals. Schedule a free consultation and discover how Poppy can help your business succeed with marketing that works.</p>
             <div class="cta-buttons">
                 <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="btn-primary">Book Free Consultation</a>
-                <a href="tel:+19417774933" class="btn-secondary">Call Us: (941) 777-4933</a>
+                <button class="btn-secondary">Learn More</button>
             </div>
         </div>
     </section>
 
-    <!-- Lightbox Modal for Portfolio Images -->
-    <div id="imageModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <img class="modal-image" id="modalImage" src="" alt="Portfolio Project">
-        </div>
-    </div>
-
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <p>Copyright 2025 Poppy Marketing & Consulting. Affordable Marketing for Small Businesses.</p>
-            </div>
-            <div class="footer-section">
-                <p><strong>Contact Us</strong></p>
-                <p><i class="fa-solid fa-location-dot"></i> 7700 Imperial Hwy. Suite B3<br>Downey, CA 90242</p>
-                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:info@poppymarketingandconsulting.com">info@poppymarketingandconsulting.com</a></p>
-                <p><i class="fa-solid fa-phone"></i> <a href="tel:+19417774933">(941) 777-4933</a></p>
-            </div>
-            <div class="footer-section">
-                <a href="tel:+19417774933" class="btn-call">Call Us: (941) 777-4933</a>
-            </div>
-        </div>
+        <p>Copyright 2025 Poppy Marketing & Consulting. Affordable Marketing for Small Businesses. | <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a></p>
     </footer>
 
     <script>
-        // FAQ Toggle
         const faqItems = document.querySelectorAll('.faq-item');
         faqItems.forEach(item => {
             item.querySelector('.faq-question').addEventListener('click', () => {
                 item.classList.toggle('active');
             });
-        });
-
-        // Portfolio Image Lightbox
-        const modal = document.getElementById('imageModal');
-        const modalImage = document.getElementById('modalImage');
-        const closeBtn = document.querySelector('.close');
-        const portfolioImages = document.querySelectorAll('.portfolio-image img');
-
-        portfolioImages.forEach(img => {
-            img.addEventListener('click', () => {
-                modal.style.display = 'block';
-                modalImage.src = img.src;
-            });
-            img.style.cursor = 'pointer';
-        });
-
-        closeBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
         });
     </script>
 </body>
