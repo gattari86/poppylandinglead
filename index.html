@@ -286,7 +286,7 @@
 
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: 1fr;
             gap: var(--space-3xl);
             margin-top: var(--space-3xl);
         }
@@ -298,6 +298,9 @@
             transition: all 0.3s ease;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
         }
 
         .portfolio-card:hover {
@@ -306,19 +309,21 @@
         }
 
         .portfolio-image {
-            width: 100%;
-            height: 280px;
+            width: 50%;
+            min-height: 300px;
             background: linear-gradient(135deg, var(--light-gray), var(--border-gray));
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            flex-shrink: 0;
         }
 
         .portfolio-image img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            padding: var(--space-md);
         }
 
         .portfolio-body {
@@ -326,6 +331,8 @@
             display: flex;
             flex-direction: column;
             gap: var(--space-md);
+            width: 50%;
+            justify-content: center;
         }
 
         .portfolio-caption {
@@ -812,6 +819,19 @@
                 gap: var(--space-2xl);
             }
 
+            .portfolio-card {
+                flex-direction: column;
+            }
+
+            .portfolio-image,
+            .portfolio-body {
+                width: 100%;
+            }
+
+            .portfolio-image {
+                min-height: 250px;
+            }
+
             .pricing-card:nth-child(2) {
                 transform: scale(1);
             }
@@ -991,7 +1011,7 @@
             <p>Web design, social media, paid ads, and branding for Houston-area businesses</p>
             <div class="hero-cta-group">
                 <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="hero-cta">Book a free consultation</a>
-                <p class="hero-note">Includes a free market analysis emailed after your consultation to help you understand your business and customers.</p>
+                <p class="hero-note">Get a free market analysis PDF sent after your consultation call to help you understand your business and customers better.</p>
             </div>
         </div>
     </section>
@@ -1001,7 +1021,7 @@
         <div class="services-grid">
             <div class="service-card">
                 <h3>Logo Design</h3>
-                <p>Custom brand logos that establish a strong visual identity. Starting at $250.</p>
+                <p>Custom brand logos that establish a strong visual identity. Professional logo package with all source files included. Starting at $350.</p>
             </div>
             <div class="service-card">
                 <h3>Web Design</h3>
@@ -1138,16 +1158,16 @@
             <h2>Client Success Stories</h2>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
-                    <p>"Poppy transformed our online presence in just three months. We've seen a 40% increase in qualified leads."</p>
-                    <div class="testimonial-author">- Sarah Martinez, Local Retail Owner</div>
+                    <p>"Professional, knowledgeable, attentive and perceptive. The creativity and superb work all around exceeded my expectations. They understood exactly what was needed to market strategically and build a site that would establish our brand."</p>
+                    <div class="testimonial-author">- Verified Client Review</div>
                 </div>
                 <div class="testimonial-card">
-                    <p>"The team understood our brand immediately and created marketing materials that truly represent us."</p>
-                    <div class="testimonial-author">- James Chen, Service Business Owner</div>
+                    <p>"Working with Poppy has been an absolute game-changer for our business. I'm impressed by their professionalism and deep understanding of strategy and marketing. They didn't offer cookie-cutter solutions but took time to understand our goals and crafted a customized approach."</p>
+                    <div class="testimonial-author">- Verified Client Review</div>
                 </div>
                 <div class="testimonial-card">
-                    <p>"Professional, responsive, and results-driven. Exactly what a growing small business needs."</p>
-                    <div class="testimonial-author">- Michelle Rodriguez, E-commerce Entrepreneur</div>
+                    <p>"They consistently went above and beyond with assistance on our website, displaying professionalism, expertise, and genuine interest in our vision, delivering a website that was both visually impressive and operated flawlessly."</p>
+                    <div class="testimonial-author">- Verified Client Review</div>
                 </div>
             </div>
         </div>
