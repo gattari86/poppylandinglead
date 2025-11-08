@@ -173,7 +173,7 @@
         }
 
         .hero-note {
-            font-size: 0.9rem;
+            font-size: 0.72rem;
             max-width: 600px;
             opacity: 0.9;
             font-style: italic;
@@ -215,6 +215,17 @@
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
+            text-align: center;
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: var(--space-md);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--turquoise);
         }
 
         .service-card:hover {
@@ -271,7 +282,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--poppy-purple);
+            color: var(--turquoise);
         }
 
         .benefit-card h3 {
@@ -456,6 +467,14 @@
             font-style: italic;
         }
 
+        .testimonial-stars {
+            display: flex;
+            gap: 4px;
+            margin-bottom: var(--space-md);
+            color: #FFD700;
+            font-size: 1.2rem;
+        }
+
         .testimonial-author {
             font-weight: 700;
             color: var(--poppy-purple);
@@ -558,7 +577,7 @@
         }
 
         .founder-section {
-            background: linear-gradient(135deg, var(--poppy-purple) 0%, rgba(159, 125, 255, 0.8) 100%);
+            background: linear-gradient(135deg, var(--turquoise) 0%, rgba(48, 209, 176, 0.85) 100%);
             color: var(--pure-white);
             padding: var(--space-5xl) var(--space-2xl);
             text-align: center;
@@ -739,6 +758,72 @@
 
         footer a:hover {
             text-decoration: underline;
+        }
+
+        /* Image Modal Styles */
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            justify-content: center;
+            align-items: center;
+            padding: var(--space-lg);
+        }
+
+        .image-modal.active {
+            display: flex;
+        }
+
+        .image-modal-content {
+            max-width: 95%;
+            max-height: 95%;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .image-modal-close {
+            position: absolute;
+            top: var(--space-lg);
+            right: var(--space-xl);
+            color: var(--pure-white);
+            font-size: 3rem;
+            font-weight: 300;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            line-height: 1;
+            z-index: 10000;
+        }
+
+        .image-modal-close:hover {
+            color: var(--turquoise);
+            transform: scale(1.1);
+        }
+
+        .portfolio-image {
+            cursor: pointer;
+            position: relative;
+        }
+
+        .portfolio-image::after {
+            content: '🔍';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .portfolio-card:hover .portfolio-image::after {
+            opacity: 0.8;
         }
 
         @media (max-width: 1024px) {
@@ -1018,16 +1103,19 @@
         <h2>Our Offers</h2>
         <div class="services-grid">
             <div class="service-card">
+                <div class="service-icon"><i class="ph-fill ph-palette"></i></div>
                 <h3>Logo Design</h3>
-                <p>Custom brand logos that establish a strong visual identity. Starting at $250.</p>
+                <p>Custom brand logos that establish a strong visual identity. Starting at $350.</p>
             </div>
             <div class="service-card">
+                <div class="service-icon"><i class="ph-fill ph-devices"></i></div>
                 <h3>Web Design</h3>
                 <p>Professional websites designed to convert visitors into customers. Starting at $1,200.</p>
             </div>
             <div class="service-card">
-                <h3>Meta Ads Management</h3>
-                <p>Performance-based advertising campaigns to reach your ideal customers. Starting at $500.</p>
+                <div class="service-icon"><i class="ph-fill ph-megaphone"></i></div>
+                <h3>Meta/Google Ads Management</h3>
+                <p>Performance-based advertising campaigns to reach your ideal customers. Starting at $500/month (ad spend separate).</p>
             </div>
         </div>
     </section>
@@ -1037,27 +1125,27 @@
             <h2>Why Small Businesses Love Poppy</h2>
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <div class="benefit-icon"><i class="ph ph-diamond"></i></div>
+                    <div class="benefit-icon"><i class="ph-fill ph-currency-circle-dollar"></i></div>
                     <h3>Affordable Pricing</h3>
                     <p>No hidden fees. Transparent quotes and flexible payment options for every budget.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon"><i class="ph ph-users"></i></div>
+                    <div class="benefit-icon"><i class="ph-fill ph-users-three"></i></div>
                     <h3>Personalized Attention</h3>
                     <p>Weekly check-ins and direct communication. You'll never be handed off to juniors.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon"><i class="ph ph-translate"></i></div>
+                    <div class="benefit-icon"><i class="ph-fill ph-globe-hemisphere-west"></i></div>
                     <h3>Bilingual Expertise</h3>
                     <p>English and Spanish services for Houston's diverse business community.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon"><i class="ph ph-certificate"></i></div>
+                    <div class="benefit-icon"><i class="ph-fill ph-briefcase"></i></div>
                     <h3>Fortune 500 Experience</h3>
                     <p>17+ years marketing expertise from major corporations, applied to your business.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon"><i class="ph ph-chart-line-up"></i></div>
+                    <div class="benefit-icon"><i class="ph-fill ph-star"></i></div>
                     <h3>Proven Results</h3>
                     <p>5-star reputation with verified reviews proving our commitment to client success.</p>
                 </div>
@@ -1156,16 +1244,37 @@
             <h2>Client Success Stories</h2>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
-                    <p>"Poppy transformed our online presence in just three months. We've seen a 40% increase in qualified leads."</p>
-                    <div class="testimonial-author">- Sarah Martinez, Local Retail Owner</div>
+                    <div class="testimonial-stars">
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                    </div>
+                    <p>"Professional, knowledgeable, attentive and perceptive. I am so pleased and impressed with Ricardo and Poppy Marketing and Consulting! The creativity and superb work all around exceeded my expectations. They understood exactly what I wanted, what I needed to market strategically and build a site that would establish my company's brand and online presence."</p>
+                    <div class="testimonial-author">- Resilient Resources LLC</div>
                 </div>
                 <div class="testimonial-card">
-                    <p>"The team understood our brand immediately and created marketing materials that truly represent us."</p>
-                    <div class="testimonial-author">- James Chen, Service Business Owner</div>
+                    <div class="testimonial-stars">
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                    </div>
+                    <p>"Working with Poppy has been an absolute game-changer for our business. They didn't just offer cookie-cutter solutions—they took the time to truly understand our goals, challenges, and audience, and then crafted a customized approach that delivered real results."</p>
+                    <div class="testimonial-author">- Daisy MD Care</div>
                 </div>
                 <div class="testimonial-card">
-                    <p>"Professional, responsive, and results-driven. Exactly what a growing small business needs."</p>
-                    <div class="testimonial-author">- Michelle Rodriguez, E-commerce Entrepreneur</div>
+                    <div class="testimonial-stars">
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                    </div>
+                    <p>"I would like to express my appreciation for Poppy's exceptional work! They consistently went above and beyond to assist me with my website, and the outcomes exceeded my expectations. They took the time to understand my brand, ultimately delivering a website that is not only visually impressive but also operates flawlessly."</p>
+                    <div class="testimonial-author">- Elizabeth's Photography</div>
                 </div>
             </div>
         </div>
@@ -1176,40 +1285,44 @@
             <h2>Pricing That Works for You</h2>
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <h3>Starter</h3>
-                    <p style="margin-bottom: var(--space-lg); font-size: 0.95rem;">Perfect for new businesses</p>
-                    <div class="pricing-amount">$500</div>
+                    <h3>Logo Design</h3>
+                    <p style="margin-bottom: var(--space-lg); font-size: 0.95rem;">Custom brand identity</p>
+                    <div class="pricing-amount">$350</div>
                     <ul>
-                        <li>Logo design or basic web presence</li>
-                        <li>Social media setup</li>
-                        <li>One month management included</li>
-                        <li>Email support</li>
+                        <li>Custom logo design</li>
+                        <li>Multiple concept options</li>
+                        <li>Revision rounds included</li>
+                        <li>High-resolution file formats</li>
+                        <li>Brand color palette</li>
                     </ul>
-                    <button class="pricing-cta">Get Started</button>
+                    <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="pricing-cta">Get Started</a>
                 </div>
                 <div class="pricing-card">
-                    <h3>Growth</h3>
-                    <p style="margin-bottom: var(--space-lg); font-size: 0.95rem;">Most popular</p>
-                    <div class="pricing-amount">$2,500</div>
+                    <h3>One-Page Website</h3>
+                    <p style="margin-bottom: var(--space-lg); font-size: 0.95rem;">Professional web presence</p>
+                    <div class="pricing-amount">$1,200</div>
                     <ul>
-                        <li>Professional website or comprehensive branding</li>
-                        <li>Monthly social media management</li>
-                        <li>Content creation (4 pieces/month)</li>
-                        <li>Quarterly strategy reviews</li>
+                        <li>Custom one-page design</li>
+                        <li>Mobile responsive</li>
+                        <li>Contact form integration</li>
+                        <li>SEO optimization</li>
+                        <li>Fast loading speed</li>
                     </ul>
-                    <button class="pricing-cta">Schedule Consultation</button>
+                    <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="pricing-cta">Get Started</a>
                 </div>
                 <div class="pricing-card">
-                    <h3>Scale</h3>
-                    <p style="margin-bottom: var(--space-lg); font-size: 0.95rem;">For growing companies</p>
-                    <div class="pricing-amount">Custom</div>
+                    <h3>Meta/Google Ads</h3>
+                    <p style="margin-bottom: var(--space-lg); font-size: 0.95rem;">Performance advertising</p>
+                    <div class="pricing-amount">$500/mo</div>
                     <ul>
-                        <li>Full-service marketing suite</li>
-                        <li>Paid advertising campaigns</li>
-                        <li>Advanced analytics and reporting</li>
-                        <li>Dedicated account management</li>
+                        <li>Campaign strategy & setup</li>
+                        <li>Ad creative development</li>
+                        <li>Audience targeting</li>
+                        <li>Performance monitoring</li>
+                        <li>Monthly reporting</li>
+                        <li style="font-style: italic; color: var(--poppy-purple); font-weight: 600;">Note: Ad spend is separate</li>
                     </ul>
-                    <button class="pricing-cta">Contact Us</button>
+                    <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="pricing-cta">Get Started</a>
                 </div>
             </div>
         </div>
@@ -1293,21 +1406,63 @@
             <p>Let's talk about your goals. Schedule a free consultation and discover how Poppy can help your business succeed with marketing that works.</p>
             <div class="cta-buttons">
                 <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="btn-primary">Book Free Consultation</a>
-                <button class="btn-secondary">Learn More</button>
+                <a href="tel:9417774933" class="btn-secondary">Speak to a Specialist</a>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>Copyright 2025 Poppy Marketing & Consulting. Affordable Marketing for Small Businesses. | <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a></p>
+        <p>Copyright 2025 Poppy Marketing & Consulting. Affordable Marketing for Small Businesses.<br>Visit our website at: <a href="https://www.poppymarketingandconsulting.com" target="_blank">www.poppymarketingandconsulting.com</a></p>
     </footer>
 
+    <!-- Image Modal -->
+    <div class="image-modal" id="imageModal">
+        <span class="image-modal-close" id="modalClose">&times;</span>
+        <img class="image-modal-content" id="modalImage" alt="Expanded portfolio image">
+    </div>
+
     <script>
+        // FAQ functionality
         const faqItems = document.querySelectorAll('.faq-item');
         faqItems.forEach(item => {
             item.querySelector('.faq-question').addEventListener('click', () => {
                 item.classList.toggle('active');
             });
+        });
+
+        // Image modal functionality
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const modalClose = document.getElementById('modalClose');
+        const portfolioImages = document.querySelectorAll('.portfolio-image img');
+
+        portfolioImages.forEach(img => {
+            img.parentElement.addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.classList.add('active');
+                modalImg.src = img.src;
+                modalImg.alt = img.alt;
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        modalClose.addEventListener('click', closeModal);
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal with escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
         });
     </script>
 </body>
