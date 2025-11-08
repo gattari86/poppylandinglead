@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poppy Marketing & Consulting - Affordable Marketing for Small Businesses</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
     <style>
         * {
             margin: 0;
@@ -102,12 +104,12 @@
             content: '';
             position: absolute;
             top: 0;
-            right: 0;
-            width: 500px;
-            height: 500px;
-            background: url('public/images/poppy-field.png') no-repeat center;
-            background-size: contain;
-            opacity: 0.15;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('public/images/poppy-field.png') no-repeat center center;
+            background-size: cover;
+            opacity: 0.12;
             pointer-events: none;
             z-index: 0;
         }
@@ -256,12 +258,13 @@
         }
 
         .benefit-icon {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: var(--space-md);
             height: 60px;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: var(--poppy-purple);
         }
 
         .benefit-card h3 {
@@ -1019,27 +1022,27 @@
             <h2>Why Small Businesses Love Poppy</h2>
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <div class="benefit-icon">💎</div>
+                    <div class="benefit-icon"><i class="ph ph-diamond"></i></div>
                     <h3>Affordable Pricing</h3>
                     <p>No hidden fees. Transparent quotes and flexible payment options for every budget.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">👥</div>
+                    <div class="benefit-icon"><i class="ph ph-users"></i></div>
                     <h3>Personalized Attention</h3>
                     <p>Weekly check-ins and direct communication. You'll never be handed off to juniors.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">🌐</div>
+                    <div class="benefit-icon"><i class="ph ph-translate"></i></div>
                     <h3>Bilingual Expertise</h3>
                     <p>English and Spanish services for Houston's diverse business community.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">⭐</div>
+                    <div class="benefit-icon"><i class="ph ph-certificate"></i></div>
                     <h3>Fortune 500 Experience</h3>
                     <p>17+ years marketing expertise from major corporations, applied to your business.</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">📈</div>
+                    <div class="benefit-icon"><i class="ph ph-chart-line-up"></i></div>
                     <h3>Proven Results</h3>
                     <p>5-star reputation with verified reviews proving our commitment to client success.</p>
                 </div>
