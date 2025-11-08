@@ -221,8 +221,20 @@
 
         .service-icon {
             font-size: 3rem;
-            color: var(--poppy-purple);
+            color: var(--poppy-purple) !important;
             margin-bottom: var(--space-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            width: 80px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .service-icon i {
+            color: var(--poppy-purple) !important;
+            font-size: 3rem;
         }
 
         .service-card h3 {
@@ -279,12 +291,7 @@
 
         .benefit-icon i {
             font-size: 2.5rem;
-            color: var(--poppy-purple);
-            font-weight: 700;
-        }
-
-        .benefit-icon i::before {
-            font-weight: bold;
+            color: var(--poppy-purple) !important;
         }
 
         .benefit-card h3 {
@@ -478,7 +485,8 @@
         }
 
         .testimonial-stars i {
-            color: #ffc107;
+            color: #ffc107 !important;
+            font-size: 1.2rem;
         }
 
         .testimonial-card p {
@@ -537,6 +545,14 @@
             margin-bottom: var(--space-md);
             font-weight: 700;
             letter-spacing: 0.3px;
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        .pricing-card h3 i {
+            color: var(--poppy-purple) !important;
+            font-size: 1.8rem;
         }
 
         .pricing-amount {
@@ -841,6 +857,16 @@
 
         footer a:hover {
             color: var(--poppy-purple);
+        }
+
+        footer i {
+            color: var(--turquoise) !important;
+            margin-right: 8px;
+            font-size: 1.1rem;
+        }
+
+        footer a:hover i {
+            color: var(--poppy-purple) !important;
         }
 
         .btn-call {
