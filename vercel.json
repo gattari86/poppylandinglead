@@ -1,11 +1,5 @@
 {
   "buildCommand": "",
   "outputDirectory": ".",
-  "cleanUrls": false,
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ]
+  "cleanUrls": false
 }
