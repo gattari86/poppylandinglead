@@ -16,6 +16,22 @@
       gtag('config', 'AW-17175088460');
     </script>
 
+    <!-- Event snippet for Consultation Booking (Marketing Services) conversion page -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17175088460/AhMfCPLW_7kbEMya3P0_',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
