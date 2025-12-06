@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Ads + Landing Page. Done Right. | Poppy Marketing</title>
+    <meta name="description" content="Professional Google Ads management that generates leads. We build your landing page, launch campaigns, and optimize daily. 48-72 hour launch. Greater Houston area.">
+    <meta name="keywords" content="Google Ads management, landing page design, Houston marketing, paid search advertising, Google Ads agency">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="./assets/images/favicon.webp">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Google Ads + Landing Page. Done Right. | Poppy Marketing">
+    <meta property="og:description" content="Professional Google Ads management for Houston service businesses. 48-72 hour launch, daily optimization, AI testing.">
+    <meta property="og:url" content="https://poppymarketingandconsulting.com/google-ads">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Custom CSS -->
+    <style>
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        .font-raleway { font-family: 'Raleway', sans-serif; }
+
+        /* Brand Colors */
+        .bg-primary { background-color: #2c5484; }
+        .bg-accent-blue { background-color: #3b82f6; }
+        .text-primary { color: #2c5484; }
+        .text-accent-blue { color: #3b82f6; }
+
+        /* Gradients */
+        .gradient-primary { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
+        .gradient-dark { background: linear-gradient(135deg, #1f2937 0%, #111827 100%); }
+
+        /* Hero section */
+        .hero-height { min-height: 100vh; }
+        .hero-content { padding-top: 80px; }
+
+        @media (min-width: 768px) {
+            .hero-content { padding-top: 100px; }
+        }
+
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+
+        /* Card hover effects */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Button styles */
+        .btn-primary {
+            @apply px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors;
+        }
+
+        .btn-outline {
+            @apply px-8 py-3 border-2 border-gray-900 text-gray-900 rounded-lg font-semibold hover:bg-gray-50 transition-colors;
+        }
+
+        /* FAQ Accordion */
+        details {
+            cursor: pointer;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 640px) {
+            .hero-height { min-height: 90vh; }
+            .hero-content { padding-top: 60px; }
+        }
+
+        /* Image optimization */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="bg-white font-raleway text-gray-900">
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-40 bg-white border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-poppins font-bold text-gray-900 hover:text-gray-700 transition-colors">
+                Poppy Marketing
+            </a>
+            <div class="flex items-center gap-4">
+                <a href="tel:+19417774933" class="hidden md:flex items-center gap-2 text-gray-700 hover:text-gray-900 font-semibold">
+                    <i class="ph ph-phone-fill text-lg"></i>
+                    (941) 777-4933
+                </a>
+                <a href="#book-call" class="btn-primary text-sm md:text-base">Book Strategy Call</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="gradient-dark text-white py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-5xl md:text-6xl font-poppins font-bold mb-6 leading-tight">
+                        Google Ads + Landing Page. Done Right.
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
+                        Professional Google Ads management that actually generates leads. We build your high-converting landing page, launch your campaigns, and optimize daily—so you can focus on closing deals.
+                    </p>
+
+                    <!-- Bullet Points -->
+                    <div class="space-y-4 mb-12">
+                        <div class="flex items-start gap-4">
+                            <i class="ph ph-check-circle-fill text-2xl text-blue-400 flex-shrink-0 mt-1"></i>
+                            <p class="text-lg text-gray-100"><strong>Custom Landing Page Included:</strong> Stop sending traffic to your homepage.</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="ph ph-check-circle-fill text-2xl text-blue-400 flex-shrink-0 mt-1"></i>
+                            <p class="text-lg text-gray-100"><strong>30 Days of Intensive Management:</strong> Daily optimization during the critical learning phase.</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="ph ph-check-circle-fill text-2xl text-blue-400 flex-shrink-0 mt-1"></i>
+                            <p class="text-lg text-gray-100"><strong>AI-Powered Testing:</strong> We test 20+ ad variations to find what works fastest.</p>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <a href="#book-call" class="btn-primary text-lg flex items-center justify-center gap-2">
+                            Book Strategy Call
+                            <i class="ph ph-arrow-right-bold"></i>
+                        </a>
+                        <a href="tel:+19417774933" class="btn-outline text-lg flex items-center justify-center gap-2">
+                            <i class="ph ph-phone-fill"></i>
+                            Call (941) 777-4933
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side - Offer Card -->
+                <div class="space-y-8">
+                    <!-- Hero Mockup Image -->
+                    <div>
+                        <img src="./images/google-ads/02_landing_page_mockup.jpg" alt="High-converting landing page design" class="w-full rounded-2xl shadow-lg">
+                    </div>
+
+                    <!-- Offer Card -->
+                    <div class="bg-white text-gray-900 rounded-2xl p-8 shadow-lg border-2 border-blue-500">
+                        <div class="inline-block bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-6">
+                            Most Popular
+                        </div>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="pb-4 border-b border-gray-200">
+                                <p class="font-semibold text-lg mb-1">Google Ads Setup</p>
+                                <p class="text-gray-600 text-sm">Campaign structure, keywords, tracking, ad copy</p>
+                                <p class="text-2xl font-bold text-blue-600 mt-2">$1,200</p>
+                            </div>
+
+                            <div class="pb-4 border-b border-gray-200">
+                                <p class="font-semibold text-lg mb-1">Landing Page</p>
+                                <p class="text-gray-600 text-sm">Design, copywriting, hosting, mobile-optimized</p>
+                                <p class="text-2xl font-bold text-blue-600 mt-2">$800</p>
+                            </div>
+
+                            <div class="pb-4 border-b border-gray-200">
+                                <p class="font-semibold text-lg mb-1">30-Day Intensive Management</p>
+                                <p class="text-gray-600 text-sm">Daily optimization, A/B testing, reporting</p>
+                                <p class="text-2xl font-bold text-blue-600 mt-2">$500</p>
+                            </div>
+
+                            <div class="bg-blue-50 rounded-xl p-6 mt-6">
+                                <p class="text-gray-600 text-sm mb-2">Complete Launch Package</p>
+                                <p class="text-4xl font-bold text-blue-600">$2,500</p>
+                            </div>
+                        </div>
+
+                        <p class="text-xs text-gray-500 text-center">
+                            Ads live in 48-72 hours • Own your assets • No long-term contract
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKEPTIC SECTION -->
+    <section class="py-20 md:py-32 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <h2 class="text-4xl md:text-5xl font-poppins font-bold text-gray-900 mb-6 text-center">
+                "I tried Google Ads before. It didn't work."
+            </h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <p class="text-xl text-gray-700 mb-6 leading-relaxed">
+                        <strong>If you found this page, Google Ads worked on you.</strong>
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        The problem wasn't the platform. It was the execution. Most agencies send expensive traffic to a confusing homepage with 12 different calls-to-action. We don't do that. We build a dedicated landing page with ONE goal: get the phone to ring. Then we use AI to test what works 10x faster than traditional agencies.
+                    </p>
+                    <div class="bg-white border-l-4 border-blue-600 p-6 rounded-lg">
+                        <p class="text-lg font-semibold text-gray-900 flex items-start gap-3">
+                            <i class="ph ph-check-bold text-2xl text-blue-600 flex-shrink-0"></i>
+                            Google Ads works when it's done right. This is how we do it right.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <img src="./images/google-ads/03_before_after_comparison.jpg" alt="Before and after comparison" class="rounded-2xl shadow-lg">
+                    <img src="./images/google-ads/04_ai_testing_visualization.jpg" alt="AI testing visualization" class="rounded-2xl shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALUE PROPOSITION SECTION -->
+    <section class="py-20 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <h2 class="text-4xl md:text-5xl font-poppins font-bold text-gray-900 mb-4 text-center">
+                Here's What You're Actually Getting
+            </h2>
+            <p class="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">
+                Most Houston businesses spend $1,500-$3,500/month on Google Ads. If you get just 5-10 qualified leads and close 1-2 deals, what's that worth to you?
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center">
+                    <p class="text-gray-600 text-sm font-semibold mb-4 uppercase">Average Client Value</p>
+                    <p class="text-5xl font-bold text-blue-600 mb-2">$5K-$50K</p>
+                    <p class="text-gray-700">For most Houston service businesses</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 text-center">
+                    <p class="text-gray-600 text-sm font-semibold mb-4 uppercase">Monthly Fee</p>
+                    <p class="text-5xl font-bold text-green-600 mb-2">$900</p>
+                    <p class="text-gray-700">Typical Growth tier client</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 text-center">
+                    <p class="text-gray-600 text-sm font-semibold mb-4 uppercase">Potential ROI</p>
+                    <p class="text-5xl font-bold text-purple-600 mb-2">5-15x</p>
+                    <p class="text-gray-700">When you land 1-2 clients/month</p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-2xl p-8 md:p-12 mb-16">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Your management fee is a rounding error compared to the revenue you'll generate. That's why our pricing scales with your ad spend—the bigger your budget, the more leads we're managing, and the more attention your account deserves.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <img src="./images/google-ads/05_roi_visualization.jpg" alt="ROI visualization" class="rounded-2xl shadow-lg">
+                <img src="./images/google-ads/06_houston_business_success.jpg" alt="Houston business owner" class="rounded-2xl shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="py-20 md:py-32 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <h2 class="text-4xl md:text-5xl font-poppins font-bold text-gray-900 mb-4 text-center">
+                The "Done Right" System
+            </h2>
+            <p class="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">
+                Designed for consultants, coaches, and local services in the Greater Houston area who are serious about growth.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow card-hover">
+                    <div class="mb-8">
+                        <img src="./images/google-ads/07_landing_page_icon.jpg" alt="Landing page icon" class="w-32 h-32 object-contain">
+                    </div>
+                    <h3 class="text-2xl font-poppins font-bold text-gray-900 mb-4">1. The Landing Page</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We don't touch your main website. We build a standalone conversion page with one job: turn visitors into leads. No distractions. No confusion. Just results.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow card-hover">
+                    <div class="mb-8">
+                        <img src="./images/google-ads/08_ai_robot_icon.jpg" alt="AI robot icon" class="w-32 h-32 object-contain">
+                    </div>
+                    <h3 class="text-2xl font-poppins font-bold text-gray-900 mb-4">2. AI-Powered Campaign Setup</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We analyze your Houston/Katy competitors, generate 20+ ad variations using AI, and structure campaigns to maximize Quality Score (which means lower cost-per-click).
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow card-hover">
+                    <div class="mb-8">
+                        <img src="./images/google-ads/09_analytics_dashboard.jpg" alt="Analytics dashboard" class="w-32 h-32 object-contain">
+                    </div>
+                    <h3 class="text-2xl font-poppins font-bold text-gray-900 mb-4">3. Daily Optimization</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Most agencies check your campaigns once a month. We review daily, cut wasted spend immediately, and double down on what's working. You get weekly reports showing exactly where your money went.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section class="py-20 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <h2 class="text-4xl md:text-5xl font-poppins font-bold text-gray-900 mb-4 text-center">
+                Transparent Pricing That Scales With You
+            </h2>
+            <p class="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">
+                Invest in your assets once. Then pay for ongoing optimization based on your ad spend.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                <!-- Left Card - Launch Package -->
+                <div class="bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-2xl p-10 shadow-lg relative">
+                    <div class="absolute top-6 right-6 bg-white text-blue-600 px-4 py-2 rounded-full text-sm font-bold">
+                        PHASE 1: LAUNCH
+                    </div>
+                    <div class="mb-8 mt-8">
+                        <img src="./images/google-ads/10_launch_rocket_icon.jpg" alt="Rocket icon" class="w-20 h-20 object-contain mb-6 opacity-90">
+                    </div>
+                    <h3 class="text-3xl font-poppins font-bold mb-2">Complete Setup Package</h3>
+                    <p class="text-blue-100 mb-6">Everything you need to go live</p>
+                    <p class="text-5xl font-bold mb-10">$2,500</p>
+                    <p class="text-sm text-blue-100 mb-10">one-time</p>
+
+                    <div class="space-y-4 mb-10">
+                        <div class="flex items-start gap-3">
+                            <i class="ph ph-check-bold text-xl flex-shrink-0 mt-1"></i>
+                            <p>Custom Landing Page (design, copy, hosting)</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="ph ph-check-bold text-xl flex-shrink-0 mt-1"></i>
+                            <p>30 Days of Management (daily optimization included)</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="ph ph-check-bold text-xl flex-shrink-0 mt-1"></i>
+                            <p>Houston/Katy competitor analysis</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="ph ph-check-bold text-xl flex-shrink-0 mt-1"></i>
+                            <p>Google Ads account setup + structure</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="ph ph-check-bold text-xl flex-shrink-0 mt-1"></i>
+                            <p>Conversion tracking (calls, forms, chat)</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="ph ph-check-bold text-xl flex-shrink-0 mt-1"></i>
+                            <p>AI ad copy generation (20+ variations)</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="ph ph-check-bold text-xl flex-shrink-0 mt-1"></i>
+                            <p>Weekly performance reports</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="ph ph-check-bold text-xl flex-shrink-0 mt-1"></i>
+                            <p>You own everything (page, copy, account)</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white bg-opacity-20 rounded-lg p-6 mb-8">
+                        <p class="font-bold text-lg">Live in 48-72 hours</p>
+                        <p class="text-blue-100 text-sm mt-2">Most agencies take 2-3 weeks. We move fast.</p>
+                    </div>
+
+                    <a href="#book-call" class="block w-full bg-white text-blue-600 font-bold py-4 rounded-lg text-center hover:bg-gray-100 transition-colors">
+                        Get Started Now
+                    </a>
+                </div>
+
+                <!-- Right Card - Monthly Management -->
+                <div class="bg-white border-2 border-blue-200 rounded-2xl p-10 shadow-lg relative">
+                    <div class="absolute top-6 right-6 bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-bold">
+                        PHASE 2: GROWTH
+                    </div>
+                    <div class="mb-8 mt-8">
+                        <img src="./images/google-ads/11_growth_chart_icon.jpg" alt="Growth chart icon" class="w-20 h-20 object-contain mb-6">
+                    </div>
+                    <h3 class="text-3xl font-poppins font-bold text-gray-900 mb-2">Monthly Management</h3>
+                    <p class="text-gray-600 mb-6">Starting Month 2</p>
+                    <p class="text-5xl font-bold text-blue-600 mb-2">$600+</p>
+                    <p class="text-gray-600 mb-10">/month</p>
+
+                    <div class="space-y-4 mb-10">
+                        <div class="flex items-start gap-3">
+                            <i class="ph ph-check-bold text-xl text-blue-600 flex-shrink-0 mt-1"></i>
+                            <p class="text-gray-700">Daily bid adjustments & optimizations</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="ph ph-check-bold text-xl text-blue-600 flex-shrink-0 mt-1"></i>
+                            <p class="text-gray-700">Negative keyword management (cut waste)</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="ph ph-check-bold text-xl text-blue-600 flex-shrink-0 mt-1"></i>
+                            <p class="text-gray-700">Ongoing A/B testing of ad copy</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="ph ph-check-bold text-xl text-blue-600 flex-shrink-0 mt-1"></i>
+                            <p class="text-gray-700">Weekly performance reports</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="ph ph-check-bold text-xl text-blue-600 flex-shrink-0 mt-1"></i>
+                            <p class="text-gray-700">Monthly strategy call</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="ph ph-check-bold text-xl text-blue-600 flex-shrink-0 mt-1"></i>
+                            <p class="text-gray-700">No long-term contracts (cancel anytime)</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 rounded-lg p-6 mb-8">
+                        <p class="font-bold text-gray-900 text-lg">Pricing scales with ad spend</p>
+                        <p class="text-gray-600 text-sm mt-2">Bigger budgets get more attention. We'll recommend the right tier during your strategy call.</p>
+                    </div>
+
+                    <a href="#book-call" class="block w-full bg-blue-600 text-white font-bold py-4 rounded-lg text-center hover:bg-blue-700 transition-colors">
+                        Book Your Call
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIER BREAKDOWN SECTION -->
+    <section class="py-20 md:py-32 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <h2 class="text-4xl md:text-5xl font-poppins font-bold text-gray-900 mb-4 text-center">
+                Monthly Management Tiers
+            </h2>
+            <p class="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">
+                Your management fee is based on your monthly ad spend. More budget = more optimization required.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <!-- Tier 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow card-hover">
+                    <h3 class="text-2xl font-poppins font-bold text-gray-900 mb-2">Starter</h3>
+                    <p class="text-3xl font-bold text-blue-600 mb-1">$600</p>
+                    <p class="text-gray-600 text-sm mb-6">/month</p>
+                    <p class="text-gray-600 text-sm mb-6 pb-6 border-b border-gray-200">Ad spend: $600-$1,500/month</p>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-2">
+                            <i class="ph ph-check-bold text-blue-600 flex-shrink-0 mt-1"></i>
+                            <p class="text-sm text-gray-700">Weekly optimization</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="ph ph-check-bold text-blue-600 flex-shrink-0 mt-1"></i>
+                            <p class="text-sm text-gray-700">Bi-weekly reporting</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="ph ph-check-bold text-blue-600 flex-shrink-0 mt-1"></i>
+                            <p class="text-sm text-gray-700">Email support</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="ph ph-check-bold text-blue-600 flex-shrink-0 mt-1"></i>
+                            <p class="text-sm text-gray-700">1 monthly call (30min)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tier 2 - MOST POPULAR -->
+                <div class="bg-blue-600 text-white rounded-2xl p-8 shadow-lg relative ring-2 ring-blue-400 md:scale-105">
+                    <div class="absolute -top-4 left-6 bg-blue-400 px-4 py-1 rounded-full text-sm font-bold">
+                        MOST POPULAR
+                    </div>
+                    <h3 class="text-2xl font-poppins font-bold mb-2 mt-4">Growth</h3>
+                    <p class="text-4xl font-bold mb-1">$900</p>
+                    <p class="text-blue-100 text-sm mb-6">/month</p>
+                    <p class="text-blue-100 text-sm mb-6 pb-6 border-b border-blue-400">Ad spend: $1,501-$3,500/month</p>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-2">
+                            <i class="ph ph-check-bold flex-shrink-0 mt-1"></i>
+                            <p class="text-sm">Daily optimization</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="ph ph-check-bold flex-shrink-0 mt-1"></i>
+                            <p class="text-sm">Weekly reporting</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="ph ph-check-bold flex-shrink-0 mt-1"></i>
+                            <p class="text-sm">Priority support (email + Slack)</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="ph ph-check-bold flex-shrink-0 mt-1"></i>
+                            <p class="text-sm">1 monthly call (60min)</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="ph ph-check-bold flex-shrink-0 mt-1"></i>
+                            <p class="text-sm">Quarterly landing page A/B test</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tier 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow card-hover">
+                    <h3 class="text-2xl font-poppins font-bold text-gray-900 mb-2">Scale</h3>
+                    <p class="text-3xl font-bold text-blue-600 mb-1">$1,400</p>
+                    <p class="text-gray-600 text-sm mb-6">/month</p>
+                    <p class="text-gray-600 text-sm mb-6 pb-6 border-b border-gray-200">Ad spend: $3,501-$7,500/month</p>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-2">
+                            <i class="ph ph-check-bold text-blue-600 flex-shrink-0 mt-1"></i>
+                            <p class="text-sm text-gray-700">Everything in Growth, plus:</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="ph ph-check-bold text-blue-600 flex-shrink-0 mt-1"></i>
+                            <p class="text-sm text-gray-700">2 monthly strategy calls</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="ph ph-check-bold text-blue-600 flex-shrink-0 mt-1"></i>
+                            <p class="text-sm text-gray-700">Advanced audience targeting</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="ph ph-check-bold text-blue-600 flex-shrink-0 mt-1"></i>
+                            <p class="text-sm text-gray-700">Competitor monitoring</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tier 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow card-hover">
+                    <h3 class="text-2xl font-poppins font-bold text-gray-900 mb-2">Enterprise</h3>
+                    <p class="text-3xl font-bold text-blue-600 mb-1">Custom</p>
+                    <p class="text-gray-600 text-sm mb-6">/month</p>
+                    <p class="text-gray-600 text-sm mb-6 pb-6 border-b border-gray-200">Ad spend: $7,500+/month</p>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-2">
+                            <i class="ph ph-check-bold text-blue-600 flex-shrink-0 mt-1"></i>
+                            <p class="text-sm text-gray-700">White-glove service</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="ph ph-check-bold text-blue-600 flex-shrink-0 mt-1"></i>
+                            <p class="text-sm text-gray-700">Dedicated account manager</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="ph ph-check-bold text-blue-600 flex-shrink-0 mt-1"></i>
+                            <p class="text-sm text-gray-700">Multi-channel expansion</p>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="ph ph-check-bold text-blue-600 flex-shrink-0 mt-1"></i>
+                            <p class="text-sm text-gray-700">Custom dashboard</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Box -->
+            <div class="bg-white rounded-2xl p-10 md:p-16 text-center shadow-md">
+                <h3 class="text-3xl font-poppins font-bold text-gray-900 mb-6">Not Sure Which Tier Is Right?</h3>
+                <p class="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
+                    We'll recommend the best fit during your strategy call based on your industry, competition, and growth goals.
+                </p>
+                <a href="#book-call" class="btn-primary inline-flex items-center gap-2 text-lg">
+                    Schedule Free Strategy Call
+                    <i class="ph ph-arrow-right-bold"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADD-ON SERVICES SECTION -->
+    <section class="py-20 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <h2 class="text-4xl md:text-5xl font-poppins font-bold text-gray-900 mb-16 text-center">
+                Additional Services
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Add-on 1 -->
+                <div class="bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-2xl p-8 hover:shadow-lg transition-shadow card-hover">
+                    <div class="mb-8">
+                        <img src="./images/google-ads/13_multiple_pages_icon.jpg" alt="Multiple pages icon" class="w-24 h-24 object-contain">
+                    </div>
+                    <h3 class="text-2xl font-poppins font-bold text-gray-900 mb-4">Additional Landing Pages</h3>
+                    <p class="text-gray-600 mb-6">Build additional high-converting pages for different services or locations.</p>
+                    <div class="bg-white rounded-lg p-4 border-l-4 border-blue-600">
+                        <p class="font-semibold text-gray-900">$500 each</p>
+                    </div>
+                    <p class="text-sm text-blue-600 font-semibold mt-4">Bundle: $400/page with initial setup</p>
+                </div>
+
+                <!-- Add-on 2 -->
+                <div class="bg-gradient-to-br from-green-50 to-white border border-green-100 rounded-2xl p-8 hover:shadow-lg transition-shadow card-hover">
+                    <div class="mb-8">
+                        <img src="./images/google-ads/14_ab_testing_visual.jpg" alt="A/B testing icon" class="w-24 h-24 object-contain">
+                    </div>
+                    <h3 class="text-2xl font-poppins font-bold text-gray-900 mb-4">Landing Page Optimization</h3>
+                    <p class="text-gray-600 mb-6">Monthly A/B testing to increase conversion rates 20-50%.</p>
+                    <div class="bg-white rounded-lg p-4 border-l-4 border-green-600">
+                        <p class="font-semibold text-gray-900">$400/month</p>
+                    </div>
+                    <p class="text-sm text-green-600 font-semibold mt-4">Min. 100 conversions/month required</p>
+                </div>
+
+                <!-- Add-on 3 -->
+                <div class="bg-gradient-to-br from-purple-50 to-white border border-purple-100 rounded-2xl p-8 hover:shadow-lg transition-shadow card-hover">
+                    <div class="mb-8">
+                        <img src="./images/google-ads/15_tracking_audit_icon.jpg" alt="Tracking audit icon" class="w-24 h-24 object-contain">
+                    </div>
+                    <h3 class="text-2xl font-poppins font-bold text-gray-900 mb-4">Conversion Tracking Audit</h3>
+                    <p class="text-gray-600 mb-6">Already running Google Ads? We'll audit and fix your tracking setup.</p>
+                    <div class="bg-white rounded-lg p-4 border-l-4 border-purple-600">
+                        <p class="font-semibold text-gray-900">$800 one-time</p>
+                    </div>
+                    <p class="text-sm text-purple-600 font-semibold mt-4">60% of accounts have broken tracking</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="py-20 md:py-32 bg-gray-50 relative">
+        <div class="max-w-4xl mx-auto px-4 md:px-8">
+            <h2 class="text-4xl md:text-5xl font-poppins font-bold text-gray-900 mb-16 text-center">
+                Common Questions
+            </h2>
+
+            <div class="space-y-4">
+                <details class="group bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                    <summary class="flex items-center justify-between font-poppins font-bold text-lg text-gray-900">
+                        What's the minimum ad spend required?
+                        <span class="text-2xl group-open:rotate-180 transition-transform"><i class="ph ph-plus-bold"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-6 leading-relaxed">
+                        The minimum is $600/month (paid directly to Google, not to us). However, for most competitive industries in Houston, we recommend budgeting $1,500-$3,500/month to get faster data and more leads.
+                    </p>
+                </details>
+
+                <details class="group bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                    <summary class="flex items-center justify-between font-poppins font-bold text-lg text-gray-900">
+                        Why does your management fee scale with ad spend?
+                        <span class="text-2xl group-open:rotate-180 transition-transform"><i class="ph ph-plus-bold"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-6 leading-relaxed">
+                        Simple: bigger budgets require more work. A client spending $600/month generates ~20 clicks/day to analyze. A client spending $6,000/month generates ~200 clicks/day. That's 10x the data to manage and optimize.
+                    </p>
+                </details>
+
+                <details class="group bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                    <summary class="flex items-center justify-between font-poppins font-bold text-lg text-gray-900">
+                        Do I own the landing page and ads?
+                        <span class="text-2xl group-open:rotate-180 transition-transform"><i class="ph ph-plus-bold"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-6 leading-relaxed">
+                        Yes. You own everything. The landing page copy, design files, and Google Ads account are yours. If you decide to leave, you keep everything and can take it to another agency.
+                    </p>
+                </details>
+
+                <details class="group bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                    <summary class="flex items-center justify-between font-poppins font-bold text-lg text-gray-900">
+                        How fast can we go live?
+                        <span class="text-2xl group-open:rotate-180 transition-transform"><i class="ph ph-plus-bold"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-6 leading-relaxed">
+                        Once we complete your strategy call and get your approval, we can typically have your landing page built and ads live within 48-72 hours. Most agencies take 2-3 weeks.
+                    </p>
+                </details>
+
+                <details class="group bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                    <summary class="flex items-center justify-between font-poppins font-bold text-lg text-gray-900">
+                        I serve clients outside Houston. Can you still help?
+                        <span class="text-2xl group-open:rotate-180 transition-transform"><i class="ph ph-plus-bold"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-6 leading-relaxed">
+                        Absolutely. While we're based in Katy and specialize in the Houston market, Google Ads works anywhere. We can target any city, zip code, or state in the US.
+                    </p>
+                </details>
+
+                <details class="group bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                    <summary class="flex items-center justify-between font-poppins font-bold text-lg text-gray-900">
+                        What if I'm already running Google Ads?
+                        <span class="text-2xl group-open:rotate-180 transition-transform"><i class="ph ph-plus-bold"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-6 leading-relaxed">
+                        Great! We offer a $800 Conversion Tracking Audit where we analyze your existing setup, identify what's broken, and show you exactly what needs to be fixed. Book a strategy call and we'll take a quick look for free.
+                    </p>
+                </details>
+
+                <details class="group bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                    <summary class="flex items-center justify-between font-poppins font-bold text-lg text-gray-900">
+                        Are there any long-term contracts?
+                        <span class="text-2xl group-open:rotate-180 transition-transform"><i class="ph ph-plus-bold"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-6 leading-relaxed">
+                        No. The $2,500 launch package is a one-time payment. After that, monthly management is month-to-month. You can cancel anytime with 30 days' notice.
+                    </p>
+                </details>
+
+                <details class="group bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                    <summary class="flex items-center justify-between font-poppins font-bold text-lg text-gray-900">
+                        What kind of results should I expect?
+                        <span class="text-2xl group-open:rotate-180 transition-transform"><i class="ph ph-plus-bold"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-6 leading-relaxed">
+                        Results depend on your industry, competition, and spending. We can't guarantee specific leads because every market is different. What we CAN guarantee is daily optimization, transparent reporting every week, and cutting wasted spend immediately. Most clients see qualified leads within 7-14 days.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section id="book-call" class="gradient-dark text-white py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-5xl md:text-6xl font-poppins font-bold mb-6 leading-tight">
+                        Ready to Stop Guessing and Start Growing?
+                    </h2>
+                    <p class="text-xl text-gray-200 mb-10 leading-relaxed">
+                        Book a free 30-minute strategy call. We'll review your business, analyze your Houston market, and show you exactly what a Google Ads campaign would look like for you—no pressure, no sales pitch.
+                    </p>
+
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <a href="https://calendly.com/poppy-marketing" target="_blank" rel="noopener noreferrer" class="btn-primary text-lg flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700">
+                            <i class="ph ph-calendar-blank-bold text-xl"></i>
+                            Schedule Your Free Call
+                        </a>
+                        <a href="tel:+19417774933" class="btn-outline text-lg flex items-center justify-center gap-2 border-white text-white hover:bg-white hover:bg-opacity-10">
+                            <i class="ph ph-phone-fill text-xl"></i>
+                            (941) 777-4933
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="./images/google-ads/17_strategy_call_visual.jpg" alt="Strategy call consultation" class="rounded-2xl shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="font-poppins font-bold text-xl mb-4">Poppy Marketing</h3>
+                    <p class="text-gray-400 text-sm">Based in Katy, TX | Serving the Greater Houston Area</p>
+                </div>
+                <div>
+                    <h4 class="font-poppins font-bold mb-6">Services</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="#pricing" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-poppins font-bold mb-6">Contact</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="tel:+19417774933" class="hover:text-white transition-colors">(941) 777-4933</a></li>
+                        <li><a href="mailto:hello@poppymarketingandconsulting.com" class="hover:text-white transition-colors">hello@poppymarketingandconsulting.com</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-poppins font-bold mb-6">Legal</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="./privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="/" class="hover:text-white transition-colors">Back to Home</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-12 text-center text-gray-400 text-sm">
+                <p>© 2025 Poppy Marketing & Consulting LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
