@@ -972,7 +972,7 @@
                         </div>
 
                         <!-- ROI Highlight -->
-                        <div class="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-8 text-center mb-8 text-white">
+                        <div id="roiHighlightBox" class="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-8 text-center mb-8 text-white transition-colors duration-300">
                             <p class="text-lg mb-2 opacity-90">Your Estimated ROI</p>
                             <p class="text-6xl sm:text-7xl font-bold mb-2" id="roiMultiplier">4.2x</p>
                             <p class="text-xl opacity-90">Return on Investment</p>
@@ -1657,7 +1657,30 @@
             document.getElementById('totalInvestment').textContent = '$' + totalInvestment6Mo.toLocaleString();
             document.getElementById('totalRevenue').textContent = '$' + totalRevenue6Mo.toLocaleString();
             document.getElementById('totalClosedDeals').textContent = totalClosedDeals6Mo;
-            document.getElementById('netProfit').textContent = '$' + netProfit6Mo.toLocaleString();
+
+            // Update net profit with conditional color
+            const netProfitElement = document.getElementById('netProfit');
+            const netProfitDisplay = netProfit6Mo >= 0 ? '$' + netProfit6Mo.toLocaleString() : '-$' + Math.abs(netProfit6Mo).toLocaleString();
+            netProfitElement.textContent = netProfitDisplay;
+
+            // Change color based on profit/loss
+            if (netProfit6Mo >= 0) {
+                netProfitElement.classList.remove('text-red-600');
+                netProfitElement.classList.add('text-green-600');
+            } else {
+                netProfitElement.classList.remove('text-green-600');
+                netProfitElement.classList.add('text-red-600');
+            }
+
+            // Update ROI highlight box color based on profitability
+            const roiHighlightBox = document.getElementById('roiHighlightBox');
+            if (netProfit6Mo >= 0) {
+                roiHighlightBox.classList.remove('from-red-500', 'to-red-600');
+                roiHighlightBox.classList.add('from-green-500', 'to-green-600');
+            } else {
+                roiHighlightBox.classList.remove('from-green-500', 'to-green-600');
+                roiHighlightBox.classList.add('from-red-500', 'to-red-600');
+            }
 
             // Move to results
             nextStep(3);
