@@ -776,7 +776,7 @@
     </section>
 
     <!-- ROI CALCULATOR SECTION -->
-    <section class="section-padding bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+    <section id="roiCalculator" class="section-padding bg-gradient-to-br from-blue-600 to-blue-800 text-white">
         <div class="container-custom">
             <div class="text-center mb-12 lg:mb-16">
                 <div class="inline-block bg-white text-blue-600 px-4 py-2 rounded-full text-sm font-bold mb-6">
@@ -792,7 +792,7 @@
             </div>
 
             <!-- Calculator Container -->
-            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-5xl mx-auto">
+            <div id="calculatorContainer" class="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-5xl mx-auto">
                 <!-- Progress Bar -->
                 <div class="bg-gray-50 px-6 sm:px-8 py-6 border-b border-gray-200">
                     <div class="flex items-center justify-between mb-3">
@@ -875,10 +875,11 @@
                         </div>
 
                         <div class="text-center mt-10">
-                            <button onclick="nextStep(2)" class="btn-primary inline-flex items-center gap-2 px-8 py-4">
+                            <button type="button" onclick="event.preventDefault(); nextStep(2);" class="btn-primary inline-flex items-center justify-center gap-2 px-8 py-5 w-full sm:w-auto text-lg font-bold">
                                 <span>Continue to Budget</span>
                                 <i class="ph-bold ph-arrow-right text-xl"></i>
                             </button>
+                            <p class="text-sm text-gray-500 mt-4">Step 1 of 3 • Takes less than 60 seconds</p>
                         </div>
                     </div>
 
@@ -896,10 +897,10 @@
                             <!-- Budget Period Toggle -->
                             <div class="flex justify-center">
                                 <div class="inline-flex bg-gray-100 rounded-xl p-1">
-                                    <button onclick="setBudgetPeriod('monthly')" id="monthlyBtn" class="px-6 py-3 rounded-lg font-semibold bg-blue-600 text-white transition-colors">
+                                    <button type="button" onclick="event.preventDefault(); setBudgetPeriod('monthly');" id="monthlyBtn" class="px-6 py-3 rounded-lg font-semibold bg-blue-600 text-white transition-colors">
                                         Monthly
                                     </button>
-                                    <button onclick="setBudgetPeriod('daily')" id="dailyBtn" class="px-6 py-3 rounded-lg font-semibold text-gray-600 hover:text-gray-900 transition-colors">
+                                    <button type="button" onclick="event.preventDefault(); setBudgetPeriod('daily');" id="dailyBtn" class="px-6 py-3 rounded-lg font-semibold text-gray-600 hover:text-gray-900 transition-colors">
                                         Daily
                                     </button>
                                 </div>
@@ -947,16 +948,17 @@
                             </div>
                         </div>
 
-                        <div class="flex justify-center gap-4 mt-10">
-                            <button onclick="nextStep(1)" class="btn-secondary inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-300 text-gray-700 bg-white hover:bg-gray-50">
+                        <div class="flex flex-col sm:flex-row justify-center gap-4 mt-10">
+                            <button type="button" onclick="event.preventDefault(); nextStep(1);" class="btn-secondary inline-flex items-center justify-center gap-2 px-6 py-4 border-2 border-gray-300 text-gray-700 bg-white hover:bg-gray-50 text-base font-semibold w-full sm:w-auto order-2 sm:order-1">
                                 <i class="ph-bold ph-arrow-left text-xl"></i>
                                 <span>Back</span>
                             </button>
-                            <button onclick="calculateROI()" class="btn-primary inline-flex items-center gap-2 px-8 py-4">
+                            <button type="button" onclick="event.preventDefault(); calculateROI();" class="btn-primary inline-flex items-center justify-center gap-2 px-8 py-5 text-lg font-bold w-full sm:w-auto order-1 sm:order-2">
                                 <span>See My Results</span>
                                 <i class="ph-bold ph-arrow-right text-xl"></i>
                             </button>
                         </div>
+                        <p class="text-center text-sm text-gray-500 mt-4">Step 2 of 3 • Almost there!</p>
                     </div>
 
                     <!-- Step 3: Your Results -->
@@ -1032,19 +1034,19 @@
                         </div>
 
                         <!-- CTA Buttons -->
-                        <div class="flex flex-col sm:flex-row justify-center gap-4">
-                            <button onclick="nextStep(2)" class="btn-secondary inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-gray-300 text-gray-700 bg-white hover:bg-gray-50">
+                        <div class="space-y-4">
+                            <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="btn-primary inline-flex items-center justify-center gap-2 px-8 py-5 text-lg font-bold w-full shadow-xl">
+                                <i class="ph-bold ph-calendar-blank text-2xl"></i>
+                                <span>Book Free Consultation Now</span>
+                            </a>
+                            <button type="button" onclick="event.preventDefault(); nextStep(2);" class="btn-secondary inline-flex items-center justify-center gap-2 px-6 py-4 border-2 border-gray-300 text-gray-700 bg-white hover:bg-gray-50 w-full text-base font-semibold">
                                 <i class="ph-bold ph-arrow-left text-xl"></i>
                                 <span>Adjust Numbers</span>
                             </button>
-                            <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="btn-primary inline-flex items-center justify-center gap-2 px-8 py-4">
-                                <i class="ph-bold ph-calendar-blank text-xl"></i>
-                                <span>Book Free Consultation</span>
-                            </a>
                         </div>
 
                         <p class="text-center text-gray-600 text-sm mt-6">
-                            Let's validate these numbers for your specific industry and market.
+                            💡 Let's validate these numbers for your specific industry and market on a free 30-minute call.
                         </p>
                     </div>
                 </div>
@@ -1549,8 +1551,15 @@
             // Update progress indicators
             updateProgress(step);
 
-            // Scroll to calculator
-            document.querySelector('.bg-gradient-to-br.from-blue-600').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Scroll to calculator container (fixed scroll target)
+            setTimeout(() => {
+                const calculator = document.getElementById('calculatorContainer');
+                if (calculator) {
+                    const yOffset = -20; // Small offset from top
+                    const y = calculator.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                }
+            }, 100);
         }
 
         // Update progress bar and indicators
