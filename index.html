@@ -362,6 +362,59 @@
                 padding-right: 2rem;
             }
         }
+
+        /* Results ticker animation */
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .stat-pulse {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        /* Comparison table mobile fixes */
+        @media (max-width: 640px) {
+            .comparison-table-mobile .grid {
+                gap: 0.5rem;
+            }
+            .comparison-table-mobile .p-4 {
+                padding: 0.75rem;
+            }
+        }
+
+        /* 90-day ROI section mobile adjustments */
+        @media (max-width: 640px) {
+            .roi-investment-grid .grid-cols-3 {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+            .roi-returns-grid .grid-cols-4 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.5rem;
+            }
+        }
+
+        /* Founder quote card */
+        .founder-quote {
+            position: relative;
+        }
+        .founder-quote::before {
+            content: '\201C';
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            font-size: 4rem;
+            color: rgba(37, 99, 235, 0.1);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        /* Hero image circle for founder */
+        .founder-hero-image {
+            object-fit: cover;
+            object-position: center top;
+        }
     </style>
 </head>
 <body class="bg-white font-raleway text-gray-900 antialiased">
@@ -407,8 +460,9 @@
         <div class="container-custom">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <div class="space-y-8">
-                    <!-- Trust Badge -->
-                    <div>
+                    <!-- Trust Badge with Founder Photo -->
+                    <div class="flex items-center gap-4">
+                        <img src="./images/ricardobrown.png" alt="Ricardo Gattas-Moras" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-green-400 founder-hero-image shadow-lg">
                         <div class="trust-badge inline-flex">
                             <i class="ph-fill ph-check-circle text-lg"></i>
                             <span>Ads Live in 48-72 Hours</span>
@@ -417,10 +471,13 @@
 
                     <div class="space-y-6">
                         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-poppins font-bold leading-tight">
-                            Google Ads + Landing Page. Done Right.
+                            Houston Service Businesses: Get 15-30+ Qualified Leads/Month from Google Ads
                         </h1>
+                        <p class="text-xl sm:text-2xl font-semibold text-green-400">
+                            Or We'll Work for Free Until You Do.
+                        </p>
 
-                        <!-- Hero Image - Unlock Your Business Potential -->
+                        <!-- Hero Image - Mobile Only -->
                         <div class="rounded-2xl overflow-hidden shadow-xl lg:hidden">
                             <img src="./images/google-ads/02_landing_page_mockup.jpg" alt="Unlock your business potential with professional Google Ads management" class="w-full" loading="eager">
                         </div>
@@ -531,6 +588,37 @@
         </div>
     </section>
 
+    <!-- RESULTS TICKER / STAT BAR -->
+    <section class="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-600 py-4 sm:py-6 overflow-hidden">
+        <div class="container-custom">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 lg:gap-16 text-white">
+                <div class="flex items-center gap-3">
+                    <i class="ph-fill ph-trend-up text-3xl sm:text-4xl text-green-400"></i>
+                    <div class="text-center sm:text-left">
+                        <p class="text-2xl sm:text-3xl font-bold">5X</p>
+                        <p class="text-xs sm:text-sm text-blue-100">More Leads vs. DIY Campaigns</p>
+                    </div>
+                </div>
+                <div class="hidden sm:block w-px h-12 bg-blue-400"></div>
+                <div class="flex items-center gap-3">
+                    <i class="ph-fill ph-clock text-3xl sm:text-4xl text-green-400"></i>
+                    <div class="text-center sm:text-left">
+                        <p class="text-2xl sm:text-3xl font-bold">48-72 hrs</p>
+                        <p class="text-xs sm:text-sm text-blue-100">Ads Go Live</p>
+                    </div>
+                </div>
+                <div class="hidden sm:block w-px h-12 bg-blue-400"></div>
+                <div class="flex items-center gap-3">
+                    <i class="ph-fill ph-currency-dollar text-3xl sm:text-4xl text-green-400"></i>
+                    <div class="text-center sm:text-left">
+                        <p class="text-2xl sm:text-3xl font-bold">114%</p>
+                        <p class="text-xs sm:text-sm text-blue-100">Avg. 90-Day ROI</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- IS THIS FOR YOU SECTION -->
     <section id="qualification" class="section-padding bg-white">
         <div class="container-custom">
@@ -584,35 +672,92 @@
         </div>
     </section>
 
-    <!-- SKEPTIC SECTION -->
+    <!-- WHY YOUR LAST AGENCY FAILED SECTION -->
     <section id="skeptic" class="section-padding bg-gray-50">
         <div class="container-custom">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-poppins font-bold text-gray-900 mb-6 text-center max-w-4xl mx-auto">
-                "I tried Google Ads before. It didn't work."
-            </h2>
+            <div class="text-center mb-12 lg:mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-poppins font-bold text-gray-900 mb-4">
+                    Why Your Last Agency Failed
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    (And How We're Different)
+                </p>
+            </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mt-12">
+            <!-- Comparison Table -->
+            <div class="max-w-4xl mx-auto mb-12">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <!-- Table Header -->
+                    <div class="grid grid-cols-2 bg-gradient-to-r from-red-500 to-red-600">
+                        <div class="p-4 sm:p-6 text-white font-bold text-center border-r border-red-400">
+                            <i class="ph-fill ph-x-circle text-2xl mb-2 block"></i>
+                            <span class="text-sm sm:text-base">What Failed Before</span>
+                        </div>
+                        <div class="p-4 sm:p-6 text-white font-bold text-center bg-gradient-to-r from-green-500 to-green-600">
+                            <i class="ph-fill ph-check-circle text-2xl mb-2 block"></i>
+                            <span class="text-sm sm:text-base">How We Fix It</span>
+                        </div>
+                    </div>
+                    <!-- Table Rows -->
+                    <div class="grid grid-cols-2 border-b border-gray-100">
+                        <div class="p-4 sm:p-6 text-gray-700 text-sm sm:text-base border-r border-gray-100 flex items-center gap-3">
+                            <i class="ph-fill ph-x text-red-500 flex-shrink-0"></i>
+                            <span>Sent traffic to homepage</span>
+                        </div>
+                        <div class="p-4 sm:p-6 text-gray-700 text-sm sm:text-base flex items-center gap-3">
+                            <i class="ph-fill ph-check text-green-500 flex-shrink-0"></i>
+                            <span><strong>Dedicated landing page</strong> with ONE goal</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 border-b border-gray-100 bg-gray-50">
+                        <div class="p-4 sm:p-6 text-gray-700 text-sm sm:text-base border-r border-gray-100 flex items-center gap-3">
+                            <i class="ph-fill ph-x text-red-500 flex-shrink-0"></i>
+                            <span>Checked campaigns weekly</span>
+                        </div>
+                        <div class="p-4 sm:p-6 text-gray-700 text-sm sm:text-base flex items-center gap-3">
+                            <i class="ph-fill ph-check text-green-500 flex-shrink-0"></i>
+                            <span><strong>Daily optimization</strong> + AI testing</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 border-b border-gray-100">
+                        <div class="p-4 sm:p-6 text-gray-700 text-sm sm:text-base border-r border-gray-100 flex items-center gap-3">
+                            <i class="ph-fill ph-x text-red-500 flex-shrink-0"></i>
+                            <span>Generic ad copy</span>
+                        </div>
+                        <div class="p-4 sm:p-6 text-gray-700 text-sm sm:text-base flex items-center gap-3">
+                            <i class="ph-fill ph-check text-green-500 flex-shrink-0"></i>
+                            <span><strong>20+ variations tested</strong> per campaign</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2">
+                        <div class="p-4 sm:p-6 text-gray-700 text-sm sm:text-base border-r border-gray-100 flex items-center gap-3 bg-gray-50">
+                            <i class="ph-fill ph-x text-red-500 flex-shrink-0"></i>
+                            <span>No call tracking</span>
+                        </div>
+                        <div class="p-4 sm:p-6 text-gray-700 text-sm sm:text-base flex items-center gap-3 bg-gray-50">
+                            <i class="ph-fill ph-check text-green-500 flex-shrink-0"></i>
+                            <span><strong>Full attribution</strong> on every lead</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <div class="space-y-6">
-                    <p class="text-xl font-semibold text-green-600 leading-relaxed">
-                        If you found this page, Google Ads worked on you.
-                    </p>
-                    <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
-                        The problem wasn't the platform. It was the execution. Most agencies send expensive traffic to a confusing homepage with 12 different calls-to-action. We don't do that. We build a dedicated landing page with ONE goal: get the phone to ring. Then we use AI to test what works 10x faster than traditional agencies.
-                    </p>
                     <div class="bg-white border-l-4 border-blue-600 p-6 rounded-lg shadow-sm">
                         <p class="text-base sm:text-lg font-semibold text-gray-900 flex items-start gap-3">
                             <i class="ph ph-check-bold text-2xl text-blue-600 flex-shrink-0"></i>
                             <span>Google Ads works when it's done right. This is how we do it right.</span>
                         </p>
                     </div>
+                    <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+                        The problem wasn't the platform—it was the execution. Most agencies send expensive traffic to a confusing homepage with 12 different calls-to-action. We build a dedicated landing page with ONE goal: get the phone to ring.
+                    </p>
                 </div>
 
                 <div class="space-y-6">
                     <div class="rounded-2xl overflow-hidden shadow-lg">
                         <img src="./images/google-ads/03_before_after_comparison.jpg" alt="Before and after Google Ads performance comparison" class="w-full" loading="lazy">
-                    </div>
-                    <div class="rounded-2xl overflow-hidden shadow-lg">
-                        <img src="./images/google-ads/04_ai_testing_visualization.jpg" alt="AI-powered ad testing visualization" class="w-full" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -864,6 +1009,159 @@
                     <p class="text-sm text-green-200 mt-2">
                         We're confident in our work because we've done this for Fortune 500 companies.
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 90-DAY META ADS ROI SECTION -->
+    <section id="90-day-roi" class="section-padding bg-gradient-to-br from-purple-900 via-purple-800 to-blue-900 text-white">
+        <div class="container-custom">
+            <div class="text-center mb-12 lg:mb-16">
+                <div class="inline-block bg-purple-500 bg-opacity-30 px-4 py-2 rounded-full text-sm font-bold mb-6 border border-purple-400">
+                    <i class="ph-bold ph-chart-line-up inline-block mr-2"></i>
+                    90-DAY PROGRAM
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-poppins font-bold mb-4">
+                    90-Day Meta Ads Program: Investment & ROI
+                </h2>
+                <p class="text-lg sm:text-xl text-purple-200 max-w-2xl mx-auto">
+                    See exactly what you'll invest and what you'll get back
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
+                <!-- What You Invest Card -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white border-opacity-20">
+                    <h3 class="text-2xl sm:text-3xl font-poppins font-bold mb-6 flex items-center gap-3">
+                        <i class="ph-fill ph-wallet text-purple-400"></i>
+                        What You Invest
+                    </h3>
+
+                    <!-- Investment Table -->
+                    <div class="space-y-4 mb-6">
+                        <div class="grid grid-cols-3 gap-4 text-sm font-semibold text-purple-300 pb-2 border-b border-purple-400 border-opacity-30">
+                            <span>Timeline</span>
+                            <span>What You Pay</span>
+                            <span>What's Included</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 text-sm sm:text-base py-2">
+                            <span class="font-semibold">Month 1</span>
+                            <span class="text-green-400 font-bold">$2,799</span>
+                            <span class="text-purple-200 text-xs sm:text-sm">Setup ($1,299) + Ad Spend ($1,500)</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 text-sm sm:text-base py-2 bg-white bg-opacity-5 rounded-lg px-2">
+                            <span class="font-semibold">Month 2</span>
+                            <span class="text-green-400 font-bold">$2,099</span>
+                            <span class="text-purple-200 text-xs sm:text-sm">Management ($599) + Ad Spend ($1,500)</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 text-sm sm:text-base py-2">
+                            <span class="font-semibold">Month 3</span>
+                            <span class="text-green-400 font-bold">$2,099</span>
+                            <span class="text-purple-200 text-xs sm:text-sm">Management ($599) + Ad Spend ($1,500)</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-purple-600 bg-opacity-30 rounded-xl p-4 sm:p-6 border border-purple-400 border-opacity-30">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-semibold">Total 90-Day Investment</span>
+                            <span class="text-2xl sm:text-3xl font-bold text-white">$6,997</span>
+                        </div>
+                        <p class="text-purple-200 text-sm">Full campaign buildout, ongoing optimization, and $4,500 in ad spend</p>
+                    </div>
+
+                    <div class="mt-4 flex items-center gap-2 text-green-400 text-sm font-semibold">
+                        <i class="ph-fill ph-gift text-lg"></i>
+                        <span>First month management fee waived—you only pay for setup and ads</span>
+                    </div>
+                </div>
+
+                <!-- What You Get Back Card -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white border-opacity-20">
+                    <h3 class="text-2xl sm:text-3xl font-poppins font-bold mb-6 flex items-center gap-3">
+                        <i class="ph-fill ph-chart-line-up text-green-400"></i>
+                        What You Get Back
+                    </h3>
+                    <p class="text-purple-200 text-sm mb-4">Based on 2% conversion rate and $5,000 average client value:</p>
+
+                    <!-- Returns Table -->
+                    <div class="space-y-4 mb-6">
+                        <div class="grid grid-cols-4 gap-2 text-xs sm:text-sm font-semibold text-purple-300 pb-2 border-b border-purple-400 border-opacity-30">
+                            <span>Month</span>
+                            <span>Leads</span>
+                            <span>Clients</span>
+                            <span>Revenue</span>
+                        </div>
+                        <div class="grid grid-cols-4 gap-2 text-sm sm:text-base py-2">
+                            <span class="font-semibold">Month 1</span>
+                            <span class="text-purple-200">~30</span>
+                            <span class="text-purple-200">1</span>
+                            <span class="text-green-400 font-bold">$5,000</span>
+                        </div>
+                        <div class="grid grid-cols-4 gap-2 text-sm sm:text-base py-2 bg-white bg-opacity-5 rounded-lg px-2">
+                            <span class="font-semibold">Month 2</span>
+                            <span class="text-purple-200">~30</span>
+                            <span class="text-purple-200">1</span>
+                            <span class="text-green-400 font-bold">$5,000</span>
+                        </div>
+                        <div class="grid grid-cols-4 gap-2 text-sm sm:text-base py-2">
+                            <span class="font-semibold">Month 3</span>
+                            <span class="text-purple-200">~30</span>
+                            <span class="text-purple-200">1</span>
+                            <span class="text-green-400 font-bold">$5,000</span>
+                        </div>
+                        <div class="grid grid-cols-4 gap-2 text-sm sm:text-base py-3 border-t border-purple-400 border-opacity-30 font-bold">
+                            <span>Total</span>
+                            <span class="text-purple-200">~90</span>
+                            <span class="text-purple-200">3</span>
+                            <span class="text-green-400 text-lg sm:text-xl">$15,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROI Summary Box -->
+            <div class="max-w-4xl mx-auto mt-8">
+                <div class="bg-gradient-to-r from-green-600 to-green-500 rounded-2xl p-6 sm:p-10 shadow-2xl">
+                    <h3 class="text-xl sm:text-2xl font-poppins font-bold mb-6 text-center">Your 90-Day ROI</h3>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mb-6">
+                        <div class="text-center">
+                            <p class="text-green-100 text-xs sm:text-sm mb-1">Total Investment</p>
+                            <p class="text-xl sm:text-2xl font-bold">$6,997</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-green-100 text-xs sm:text-sm mb-1">Expected Revenue</p>
+                            <p class="text-xl sm:text-2xl font-bold">$15,000</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-green-100 text-xs sm:text-sm mb-1">Net Profit</p>
+                            <p class="text-xl sm:text-2xl font-bold">$8,003</p>
+                        </div>
+                        <div class="text-center bg-white bg-opacity-20 rounded-xl p-3">
+                            <p class="text-green-100 text-xs sm:text-sm mb-1">ROI</p>
+                            <p class="text-2xl sm:text-4xl font-bold">114%</p>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-green-400 border-opacity-40 pt-6">
+                        <h4 class="font-bold text-lg mb-3">The Bottom Line</h4>
+                        <p class="text-green-50 leading-relaxed text-sm sm:text-base">
+                            At a conservative 2% close rate, you're positioned to <strong>more than double your investment</strong> in just 90 days. And here's the kicker: if your sales process converts at 3–4% (which is entirely achievable with strong follow-up), you're looking at <strong>5–6 new clients</strong> and <strong>$25K–$30K in revenue</strong>.
+                        </p>
+                        <p class="text-green-200 text-sm mt-4 font-semibold">
+                            This isn't just lead generation—it's predictable, profitable growth.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="text-center mt-8">
+                    <a href="https://www.poppymarketingandconsulting.com/booking-calendar/discovery-consultation" class="btn-primary inline-flex items-center gap-2 text-lg px-8 py-5 shadow-xl">
+                        <i class="ph-bold ph-calendar-blank text-2xl"></i>
+                        <span>Get Your Custom ROI Projection</span>
+                    </a>
+                    <p class="text-purple-300 text-sm mt-4">Free 30-minute consultation—no obligation</p>
                 </div>
             </div>
         </div>
@@ -1394,24 +1692,34 @@
                     <h2 class="text-3xl sm:text-4xl lg:text-5xl font-poppins font-bold text-gray-900">
                         Meet the Founder
                     </h2>
-                    <p class="text-lg sm:text-xl text-gray-700 leading-relaxed">
-                        Hi, I'm Ricardo — founder of Poppy Marketing. After 17 years leading marketing at a Fortune 100 company (managing $5M+ budgets), I left corporate to help small businesses get the same caliber strategy the big guys have.
-                    </p>
-                    <p class="text-lg sm:text-xl text-gray-700 leading-relaxed">
-                        I'm based right here in Katy, and yes, I actually answer my own phone.
-                    </p>
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border-l-4 border-blue-600 founder-quote">
+                        <p class="text-lg sm:text-xl text-gray-700 leading-relaxed italic">
+                            "After 17 years at a Fortune 100 managing $5M+ budgets, I got tired of watching small business owners get scammed by lazy agencies who treat their $2K/month like pocket change. You deserve the same caliber strategy the big guys get—without the corporate bureaucracy. That's why I answer my own phone."
+                        </p>
+                        <div class="mt-6 flex items-center gap-4">
+                            <img src="./images/ricardobrown.png" alt="Ricardo" class="w-12 h-12 rounded-full object-cover border-2 border-blue-600">
+                            <div>
+                                <p class="font-poppins font-bold text-gray-900">Ricardo Gattas-Moras</p>
+                                <p class="text-gray-600 text-sm">Founder, Poppy Marketing</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="flex flex-wrap gap-4 pt-4">
-                        <div class="flex items-center gap-2 text-gray-600">
+                        <div class="flex items-center gap-2 text-gray-600 bg-white px-4 py-2 rounded-full shadow-sm">
                             <i class="ph-fill ph-buildings text-blue-600 text-xl"></i>
-                            <span class="font-semibold">17 Years at a Fortune 100</span>
+                            <span class="font-semibold text-sm">17 Years Fortune 100</span>
                         </div>
-                        <div class="flex items-center gap-2 text-gray-600">
+                        <div class="flex items-center gap-2 text-gray-600 bg-white px-4 py-2 rounded-full shadow-sm">
                             <i class="ph-fill ph-currency-dollar text-blue-600 text-xl"></i>
-                            <span class="font-semibold">$5M+ Budget Experience</span>
+                            <span class="font-semibold text-sm">$5M+ Budgets</span>
                         </div>
-                        <div class="flex items-center gap-2 text-gray-600">
+                        <div class="flex items-center gap-2 text-gray-600 bg-white px-4 py-2 rounded-full shadow-sm">
                             <i class="ph-fill ph-map-pin text-blue-600 text-xl"></i>
-                            <span class="font-semibold">Based in Katy, TX</span>
+                            <span class="font-semibold text-sm">Katy, TX</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-600 bg-white px-4 py-2 rounded-full shadow-sm">
+                            <i class="ph-fill ph-phone text-green-600 text-xl"></i>
+                            <span class="font-semibold text-sm">I Answer My Phone</span>
                         </div>
                     </div>
                 </div>
